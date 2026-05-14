@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zuari KinetiX - Premium Landing Page</title>
+
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="font-sans text-white bg-[#111111] overflow-x-hidden">
+
+    <section class="relative min-h-screen flex flex-col justify-between overflow-hidden bg-neutral-900">
+
+        <div id="hero-carousel" class="absolute inset-0 z-0 h-full w-full overflow-hidden bg-black">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2075&q=80"
+                loading="eager" fetchpriority="high" decoding="sync"
+                class="gsap-hero-slide absolute inset-0 h-full w-full object-cover object-center opacity-0 origin-center"
+                alt="Property View 1" />
+            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2075&q=80"
+                loading="eager" fetchpriority="high" decoding="sync"
+                class="gsap-hero-slide absolute inset-0 h-full w-full object-cover object-center opacity-0 origin-center"
+                alt="Property View 2" />
+            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2075&q=80"
+                loading="eager" fetchpriority="high" decoding="sync"
+                class="gsap-hero-slide absolute inset-0 h-full w-full object-cover object-center opacity-0 origin-center"
+                alt="Property View 3" />
+        </div>
+
+        <div class="absolute inset-0 bg-black/60 z-[1] pointer-events-none"></div>
+
+        <header class="relative z-10 flex justify-between items-center px-8 md:px-16 py-6 w-full" data-gsap="fade-down"
+            data-delay="800">
+            <div class="text-2xl font-semibold tracking-wide text-yellow-500">
+                Zuari KinetiX
+            </div>
+            <button
+                class="border border-white/70 hover:border-white px-6 py-2 text-sm tracking-widest uppercase transition-colors backdrop-blur-sm">
+                Request Price
+            </button>
+        </header>
+
+        <main
+            class="relative z-10 flex flex-col lg:flex-row justify-between container mx-auto items-center flex-grow px-8 md:px-16 lg:px-24 py-12 gap-12 pb-24">
+
+            <div class="max-w-xl relative pl-8">
+                <ul id="custom-pagination"
+                    class="absolute left-0 top-1/2 -translate-y-1/2 flex flex-col gap-3 m-0 p-0 list-none z-20"
+                    data-gsap="fade-right" data-delay="1800"></ul>
+
+                <p class="text-yellow-500 uppercase tracking-[0.2em] text-sm mb-2 font-semibold" data-gsap="fade-right"
+                    data-delay="1000">Unveiling Exclusivity</p>
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-serif leading-tight mb-4 text-white"
+                    data-gsap="fade-right" data-delay="1200">
+                    BEAT THE <br> MARKET
+                </h1>
+                <p class="text-lg md:text-xl text-gray-200 mb-8 font-light" data-gsap="fade-right" data-delay="1400">
+                    Own In Bangalore's Fastest Growth Segment.
+                </p>
+                <button
+                    class="bg-gradient-to-r from-yellow-500 to-yellow-600 text-black px-8 py-3 text-sm font-bold uppercase tracking-widest hover:scale-105 transition-transform"
+                    data-gsap="fade-up" data-delay="1600">
+                    Request Price
+                </button>
+            </div>
+
+            <div class="w-full max-w-md bg-[#111111]/90 backdrop-blur-md border border-yellow-600/50 p-8 shadow-2xl"
+                data-gsap="fade-left" data-delay="1500" data-duration="1000">
+                <h2
+                    class="text-2xl font-serif text-white border-b border-yellow-600/30 pb-3 mb-4 inline-block pr-8 relative">
+                    Request A Call Back
+                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-600"></span>
+                </h2>
+
+                <div class="mb-6">
+                    <p class="text-yellow-600 font-semibold text-sm">Zuari KinetiX</p>
+                    <p class="text-xs text-gray-400 mt-1">Hobli, Devanahalli, Singanahalli, Kundana, Karnataka 562110,
+                        Bangalore - 562110</p>
+                    <p class="text-xs text-gray-400 mt-2"><span class="font-bold text-gray-300">RERA
+                            NO</span><br>PRM/KA/RERA/1250/303/PR/300925/008132 (Karnataka)</p>
+                </div>
+
+                <form action="#">
+                    <div class="space-y-4">
+                        <input type="text" placeholder="Full Name"
+                            class="w-full bg-transparent border border-gray-600 p-3 text-sm focus:border-yellow-500 focus:outline-none transition-colors">
+                        <input type="email" placeholder="Email Address"
+                            class="w-full bg-transparent border border-gray-600 p-3 text-sm focus:border-yellow-500 focus:outline-none transition-colors">
+
+                        <label class="flex items-start gap-2 text-[10px] text-gray-400 cursor-pointer">
+                            <input type="checkbox" class="mt-0.5 accent-yellow-500">
+                            Yes, I want to stay informed and receive newsletter and marketing updates.
+                        </label>
+
+                        <input type="tel" placeholder="Phone Number"
+                            class="w-full bg-transparent border border-gray-600 p-3 text-sm focus:border-yellow-500 focus:outline-none transition-colors">
+
+                        <label class="flex items-start gap-2 text-[10px] text-gray-400 cursor-pointer">
+                            <input type="checkbox" checked class="mt-0.5 accent-yellow-500">
+                            Do you have whatsapp activated on this number?
+                        </label>
+
+                        <textarea placeholder="Your Message" rows="2"
+                            class="w-full bg-transparent border border-gray-600 p-3 text-sm focus:border-yellow-500 focus:outline-none transition-colors resize-none"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-3 text-sm uppercase tracking-wider transition-colors mt-6">
+                        Submit
+                    </button>
+                </form>
+            </div>
+        </main>
+    </section>
+
+    <div id="nav-wrapper" class="sticky top-0 z-50 w-full">
+        <div id="nav-container" class="w-full max-w-[1400px] mx-auto px-4 md:px-8 py-4 md:py-6 relative -mt-8"
+            data-gsap="fade-down" data-delay="2000">
+
+            <nav id="main-nav"
+                class="flex justify-between items-center py-5 px-6 bg-[#161616] border border-[#a8894d]/40 shadow-[0_10px_30px_rgba(0,0,0,0.8)] overflow-hidden">
+
+                <div class="nav-edge-left items-center">
+                    <span class="text-xl md:text-2xl font-semibold tracking-wide text-[#ebd373]">
+                        Zuari Kineti<span class="font-serif italic font-normal">X</span>
+                    </span>
+                </div>
+
+                <div id="nav-links-container"
+                    class="flex flex-wrap justify-center items-center gap-x-6 gap-y-4 md:gap-x-10 flex-shrink-0 px-4">
+                    <a href="#about-kinetix"
+                        class="nav-link text-gray-400 text-[10px] md:text-xs font-semibold tracking-[0.15em] uppercase hover:text-white transition-colors">About
+                        Kinetix</a>
+                    <a href="#project-brief"
+                        class="nav-link text-gray-400 text-[10px] md:text-xs font-semibold tracking-[0.15em] uppercase hover:text-white transition-colors">Project
+                        Brief</a>
+                    <a href="#plans"
+                        class="nav-link text-gray-400 text-[10px] md:text-xs font-semibold tracking-[0.15em] uppercase hover:text-white transition-colors">Plans</a>
+                    <a href="#amenities"
+                        class="nav-link text-gray-400 text-[10px] md:text-xs font-semibold tracking-[0.15em] uppercase hover:text-white transition-colors">Amenities</a>
+                    <a href="#location"
+                        class="nav-link text-gray-400 text-[10px] md:text-xs font-semibold tracking-[0.15em] uppercase hover:text-white transition-colors">Location</a>
+                    <a href="#gallery"
+                        class="nav-link text-gray-400 text-[10px] md:text-xs font-semibold tracking-[0.15em] uppercase hover:text-white transition-colors">Gallery</a>
+                    <a href="#about-us"
+                        class="nav-link text-gray-400 text-[10px] md:text-xs font-semibold tracking-[0.15em] uppercase hover:text-white transition-colors">About
+                        Us</a>
+                </div>
+
+                <div class="nav-edge-right items-center">
+                    <button
+                        class="bg-[#ebd373] hover:bg-yellow-500 text-[#111] font-bold px-6 py-2.5 text-[10px] md:text-xs uppercase tracking-widest transition-colors shadow-lg">
+                        Request Price
+                    </button>
+                </div>
+
+            </nav>
+        </div>
+    </div>
+
+    <main>
+
+        <section id="about-kinetix"
+            class="scroll-section py-24 px-8 md:px-16 lg:px-24 bg-[#111111] relative overflow-hidden">
+            <div class="max-w-[1400px] mx-auto relative">
+
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full text-center pointer-events-none select-none z-0"
+                    data-gsap="fade-down">
+                    <h2 class="text-6xl md:text-8xl lg:text-[120px] font-serif font-medium text-transparent leading-none"
+                        style="-webkit-text-stroke: 1px rgba(255, 255, 255, 0.08); letter-spacing: 0.05em;">ABOUT
+                        KINETIX</h2>
+                </div>
+
+                <div class="relative z-10 text-center mb-24 mt-8 md:mt-12" data-gsap="fade-up">
+                    <h2 class="text-4xl md:text-5xl font-serif text-[#ebd373]">About Kinetix</h2>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start relative z-10">
+                    <div class="lg:col-span-5 relative" data-gsap="fade-right">
+                        <div class="absolute -left-6 md:-left-12 -top-12 -bottom-12 w-[60%] bg-[#ebd373] z-0"></div>
+                        <img src="https://images.unsplash.com/photo-1590486803833-1c5dc8ddd4c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            loading="lazy" decoding="async" alt="About Kinetix"
+                            class="relative z-10 w-full h-[500px] md:h-[650px] object-cover shadow-2xl" />
+                    </div>
+
+                    <div class="lg:col-span-7 flex flex-col gap-10 mt-8 lg:mt-0" data-gsap="fade-left">
+                        <div>
+                            <h3 class="text-[22px] font-serif text-[#ebd373] uppercase mb-4 tracking-wide">SCULPT A
+                                BRILLIANT FUTURE</h3>
+                            <div class="text-gray-300 text-[13px] md:text-[15px] leading-[1.8] space-y-4 font-normal">
+                                <p>It's Time To Unveil A Future Shimmering With Promise, In Which Your Lifestyle
+                                    Aspirations And Investment Goals Come Together In Perfect Harmony.</p>
+                                <p>Welcome To Prestige Crystal Lawns, A Brilliant Planned Plotted Development, Designed
+                                    For Those Who Know That Tomorrow Begins With The Choices They Make Today.</p>
+                                <p>Discover A Brighter, Better Life. A Life Close To Nature, Close To Convenience, And
+                                    Closer Still To The Dreams You See In Your Own Crystal Ball</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-[22px] font-serif text-[#ebd373] uppercase mb-4 tracking-wide">LIVE IN A
+                                SPARKLING SETTING</h3>
+                            <div class="text-gray-300 text-[13px] md:text-[15px] leading-[1.8] space-y-4 font-normal">
+                                <p>Located On The Fast-Evolving IVC Road, Close To NH44/Bellary Road And Just A Short
+                                    Drive From The Airport, Prestige Crystal Lawns Places You At The Heart Of
+                                    Bengaluru's Growth Corridor, Where The Future Is Already Taking Shape.</p>
+                                <p>Premier Schools, Colleges, Sporting Hubs, And Leisure Resorts Emerge Into View, Signs
+                                    Of A Vibrant Tomorrow Where Every Convenience Is Within Your Reach.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-[22px] font-serif text-[#ebd373] uppercase mb-4 tracking-wide">SCRIPT EVERY
+                                FACET OF YOUR STORY</h3>
+                            <div class="text-gray-300 text-[13px] md:text-[15px] leading-[1.8] space-y-4 font-normal">
+                                <p>Shape Your Home, Design Your Lifestyle, Script Your Story, Exactly As You Have Always
+                                    Imagined It. Choose From 233 Thoughtfully Laid Out Premium Plots In 60x40 Sft And
+                                    50x80 Sft Configurations Spread Across 24.3 Acres Of Pristine Land.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="guiding-force"
+            class="py-24 px-8 md:px-16 lg:px-24 bg-[#0a0a0a] relative overflow-hidden border-t border-b border-gray-800/50">
+            <div class="max-w-[1400px] mx-auto relative">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full text-center pointer-events-none select-none z-0"
+                    data-gsap="fade-down">
+                    <h2 class="text-6xl md:text-8xl lg:text-[120px] font-serif font-medium text-transparent leading-none"
+                        style="-webkit-text-stroke: 1px rgba(255, 255, 255, 0.04); letter-spacing: 0.05em; white-space: nowrap;">
+                        OUR GUIDING FORCE</h2>
+                </div>
+                <div class="relative z-10 text-center mb-20 mt-8 md:mt-12" data-gsap="fade-up">
+                    <h2 class="text-4xl md:text-5xl font-serif text-[#ebd373]">Our Guiding Force</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-32 max-w-4xl mx-auto relative z-10">
+                    <div class="flex flex-col max-w-[320px] mx-auto w-full" data-gsap="fade-right">
+                        <div class="w-full aspect-square border border-gray-600/60 p-1">
+                            <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                loading="lazy" decoding="async" alt="Dr. K. K. Birla"
+                                class="w-full h-full object-cover" />
+                        </div>
+                        <div class="flex items-center gap-4 mt-8 mb-4">
+                            <h3 class="text-2xl font-serif text-[#ebd373] whitespace-nowrap tracking-wide">Dr. K. K.
+                                Birla</h3>
+                            <div class="flex-grow h-[1px] bg-[#ebd373]/30"></div>
+                        </div>
+                        <p class="text-gray-300 text-sm leading-[1.8] font-light">A Visionary Leader Who Built A Legacy
+                            Of Excellence, Integrity, And Innovation.</p>
+                    </div>
+                    <div class="flex flex-col max-w-[320px] mx-auto w-full" data-gsap="fade-left">
+                        <div class="w-full aspect-square border border-gray-600/60 p-1">
+                            <img src="https://images.unsplash.com/photo-1558222218-b7b54eede3f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                loading="lazy" decoding="async" alt="Mr. Saroj Kumar Poddar"
+                                class="w-full h-full object-cover" />
+                        </div>
+                        <div class="flex items-center gap-4 mt-8 mb-4">
+                            <div class="flex-grow h-[1px] bg-[#ebd373]/30"></div>
+                            <h3 class="text-2xl font-serif text-[#ebd373] whitespace-nowrap tracking-wide">Mr. Saroj
+                                Kumar Poddar</h3>
+                        </div>
+                        <p class="text-gray-300 text-sm leading-[1.8] font-light text-right">A Dynamic Leader Who Drives
+                            Growth Through Sustainable Partnerships</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="project-brief"
+            class="scroll-section py-24 px-8 md:px-16 lg:px-24 bg-[#111111] relative overflow-hidden">
+            <div class="max-w-[1400px] mx-auto relative">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full text-center pointer-events-none select-none z-0"
+                    data-gsap="fade-down">
+                    <h2 class="text-6xl md:text-8xl lg:text-[120px] font-serif font-medium text-transparent leading-none"
+                        style="-webkit-text-stroke: 1px rgba(255, 255, 255, 0.04); letter-spacing: 0.05em; white-space: nowrap;">
+                        PROJECT BRIEF</h2>
+                </div>
+                <div class="relative z-10 text-center mb-20 mt-8 md:mt-12" data-gsap="fade-up">
+                    <h2 class="text-4xl md:text-5xl font-serif text-[#ebd373]">Project Brief</h2>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center relative z-10">
+                    <div data-gsap="fade-right">
+                        <div class="border-l-2 border-[#ebd373] pl-4 mb-8">
+                            <h3 class="text-3xl md:text-4xl font-sans text-[#ebd373] tracking-wide font-light">Zuari
+                                Kineti <span class="font-serif italic font-normal">X</span></h3>
+                        </div>
+                        <ul class="flex flex-col gap-6 text-gray-300 text-[15px] font-light leading-relaxed mb-10">
+                            <li class="flex items-start"><span
+                                    class="w-2 h-2 rounded-full bg-[#ebd373] mt-2 mr-4 flex-shrink-0"></span><span>A
+                                    Collaboration between Zuari Infraworld and SSK & Arsch</span></li>
+                            <li class="flex items-start"><span
+                                    class="w-2 h-2 rounded-full bg-[#ebd373] mt-2 mr-4 flex-shrink-0"></span><span>15-Acre
+                                    Sports-Integrated Plotted Development with Premium Infrastructure</span></li>
+                            <li class="flex items-start"><span
+                                    class="w-2 h-2 rounded-full bg-[#ebd373] mt-2 mr-4 flex-shrink-0"></span><span>It
+                                    occupies a prime position in the flourishing Growth Corridor of Bangalore's Real
+                                    Estate Scene</span></li>
+                            <li class="flex items-start"><span
+                                    class="w-2 h-2 rounded-full bg-[#ebd373] mt-2 mr-4 flex-shrink-0"></span><span>Activity
+                                    based lifestyle</span></li>
+                            <li class="flex items-start"><span
+                                    class="w-2 h-2 rounded-full bg-[#ebd373] mt-2 mr-4 flex-shrink-0"></span><span>Location
+                                    advantages</span></li>
+                        </ul>
+                        <button
+                            class="bg-gradient-to-r from-[#ebd373] to-yellow-600 text-black px-10 py-3 text-xs font-bold uppercase tracking-widest hover:scale-105 transition-transform shadow-[0_0_15px_rgba(235,211,115,0.2)]">Request
+                            Price</button>
+                    </div>
+                    <div data-gsap="fade-left" class="border border-gray-600/30 p-1">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                            loading="lazy" decoding="async" alt="Zuari KinetiX Master Plan"
+                            class="w-full h-auto object-cover" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="plans" class="scroll-section py-24 px-4 md:px-8 bg-[#161616] relative overflow-hidden">
+            <div class="max-w-[1400px] mx-auto relative">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full text-center pointer-events-none select-none z-0"
+                    data-gsap="fade-down">
+                    <h2 class="text-6xl md:text-8xl lg:text-[120px] font-serif font-medium text-transparent leading-none"
+                        style="-webkit-text-stroke: 1px rgba(255, 255, 255, 0.04); letter-spacing: 0.05em; white-space: nowrap;">
+                        PLANS</h2>
+                </div>
+                <div class="relative z-10 text-center mb-16 mt-8 md:mt-12" data-gsap="fade-up">
+                    <h2 class="text-4xl md:text-5xl font-serif text-[#ebd373]">Plans</h2>
+                </div>
+                <div class="flex justify-center flex-wrap gap-4 mb-16 relative z-10" data-gsap="fade-up"
+                    data-delay="100">
+                    <button
+                        class="plan-tab-btn bg-[#ebd373] text-[#111] font-semibold border border-transparent px-8 py-3.5 text-xs tracking-widest uppercase rounded-md relative transition-all focus:outline-none"
+                        onclick="openPlanTab(event, 'plan-master')">
+                        MASTER PLAN<div
+                            class="plan-tab-arrow absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[8px] border-l-transparent border-t-[8px] border-t-[#ebd373] border-r-[8px] border-r-transparent">
+                        </div>
+                    </button>
+                    <button
+                        class="plan-tab-btn bg-transparent text-gray-400 border border-[#ebd373]/40 hover:border-[#ebd373] hover:text-white px-8 py-3.5 text-xs tracking-widest uppercase rounded-md relative transition-all focus:outline-none"
+                        onclick="openPlanTab(event, 'plan-location')">
+                        LOCATION MAP<div
+                            class="plan-tab-arrow hidden absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[8px] border-l-transparent border-t-[8px] border-t-[#ebd373] border-r-[8px] border-r-transparent">
+                        </div>
+                    </button>
+                    <button
+                        class="plan-tab-btn bg-transparent text-gray-400 border border-[#ebd373]/40 hover:border-[#ebd373] hover:text-white px-8 py-3.5 text-xs tracking-widest uppercase rounded-md relative transition-all focus:outline-none"
+                        onclick="openPlanTab(event, 'plan-plot')">
+                        PLOT<div
+                            class="plan-tab-arrow hidden absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[8px] border-l-transparent border-t-[8px] border-t-[#ebd373] border-r-[8px] border-r-transparent">
+                        </div>
+                    </button>
+                </div>
+                <div class="relative z-10 max-w-5xl mx-auto" data-gsap="fade-up" data-delay="200">
+                    <div id="plan-master"
+                        class="plan-tab-content block opacity-100 transition-opacity duration-500 ease-in-out">
+                        <div
+                            class="bg-[#c3c3c3] p-1 md:p-2 rounded-[1rem] md:rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative">
+                            <img src="https://images.unsplash.com/photo-1524813686514-a57563d77965?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80"
+                                loading="lazy" decoding="async"
+                                class="w-full h-[400px] md:h-[600px] object-cover rounded-xl md:rounded-[1.5rem] mix-blend-multiply opacity-90" />
+                            <div
+                                class="absolute bottom-6 left-6 md:bottom-10 md:left-10 bg-[#161616] border-l-[3px] border-[#ebd373] px-6 py-4 shadow-xl">
+                                <h4 class="text-white font-sans text-sm md:text-base tracking-wide">Master Plan</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="plan-location"
+                        class="plan-tab-content hidden opacity-0 transition-opacity duration-500 ease-in-out">
+                        <div
+                            class="bg-[#c3c3c3] p-1 md:p-2 rounded-[1rem] md:rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative">
+                            <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80"
+                                loading="lazy" decoding="async"
+                                class="w-full h-[400px] md:h-[600px] object-cover rounded-xl md:rounded-[1.5rem] mix-blend-multiply opacity-90" />
+                            <div
+                                class="absolute bottom-6 left-6 md:bottom-10 md:left-10 bg-[#161616] border-l-[3px] border-[#ebd373] px-6 py-4 shadow-xl">
+                                <h4 class="text-white font-sans text-sm md:text-base tracking-wide">Location Map</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="plan-plot"
+                        class="plan-tab-content hidden opacity-0 transition-opacity duration-500 ease-in-out">
+                        <div
+                            class="bg-[#c3c3c3] p-1 md:p-2 rounded-[1rem] md:rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative">
+                            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80"
+                                loading="lazy" decoding="async"
+                                class="w-full h-[400px] md:h-[600px] object-cover rounded-xl md:rounded-[1.5rem] mix-blend-multiply opacity-90" />
+                            <div
+                                class="absolute bottom-6 left-6 md:bottom-10 md:left-10 bg-[#161616] border-l-[3px] border-[#ebd373] px-6 py-4 shadow-xl">
+                                <h4 class="text-white font-sans text-sm md:text-base tracking-wide">Plot Layout</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="amenities"
+            class="scroll-section py-24 px-4 md:px-8 bg-[#111111] relative overflow-hidden border-t border-b border-gray-800/50">
+            <div class="max-w-[1200px] mx-auto relative">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full text-center pointer-events-none select-none z-0"
+                    data-gsap="fade-down">
+                    <h2 class="text-6xl md:text-8xl lg:text-[120px] font-serif font-medium text-transparent leading-none"
+                        style="-webkit-text-stroke: 1px rgba(255, 255, 255, 0.04); letter-spacing: 0.05em; white-space: nowrap;">
+                        OUR AMENITIES</h2>
+                </div>
+                <div class="relative z-10 text-center mb-16 mt-8 md:mt-12" data-gsap="fade-up">
+                    <h2 class="text-4xl md:text-5xl font-serif text-[#ebd373]">Amenities</h2>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 relative z-10">
+                    <div class="lg:col-span-4 bg-[#161616] p-6 flex flex-col gap-3 rounded-lg shadow-2xl"
+                        data-gsap="fade-right">
+                        <button
+                            class="amenity-tab-btn bg-[#ebd373] text-[#111] w-full text-left px-6 py-5 rounded-md relative transition-all flex items-center gap-4 group focus:outline-none"
+                            onclick="openAmenityTab(event, 'amenity-active', 'Active Lifestyle')">
+                            <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M3 10h4v4H3v-4zm14 0h4v4h-4v-4zm-4-3h-2v10h2V7z"></path>
+                            </svg>
+                            <div>
+                                <h4 class="font-bold text-[15px] tracking-wide">Active Lifestyle</h4>
+                                <p class="text-[11px] opacity-80 font-medium">Relax & Rejuvenate</p>
+                            </div>
+                            <div
+                                class="amenity-tab-arrow absolute -right-3 top-1/2 -translate-y-1/2 w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-l-[12px] border-l-[#ebd373]">
+                            </div>
+                        </button>
+                        <button
+                            class="amenity-tab-btn bg-transparent text-gray-400 hover:bg-gray-800/50 hover:text-white w-full text-left px-6 py-5 rounded-md relative transition-all flex items-center gap-4 group focus:outline-none"
+                            onclick="openAmenityTab(event, 'amenity-community', 'Community & Wellness')">
+                            <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M12 3v18m0-18c-2.5 0-5 2-5 6 0 3 2.5 4 5 4s5-1 5-4c0-4-2.5-6-5-6zm0 18c-2.5 0-5-2-5-6 0-3 2.5-4 5-4s5 1 5 4c0 4-2.5 6-5 6z">
+                                </path>
+                            </svg>
+                            <div>
+                                <h4 class="font-bold text-[15px] tracking-wide">Community & Wellness</h4>
+                                <p class="text-[11px] opacity-80 font-medium">Ease in Every Detail</p>
+                            </div>
+                            <div
+                                class="amenity-tab-arrow hidden absolute -right-3 top-1/2 -translate-y-1/2 w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-l-[12px] border-l-[#ebd373]">
+                            </div>
+                        </button>
+                        <button
+                            class="amenity-tab-btn bg-transparent text-gray-400 hover:bg-gray-800/50 hover:text-white w-full text-left px-6 py-5 rounded-md relative transition-all flex items-center gap-4 group focus:outline-none"
+                            onclick="openAmenityTab(event, 'amenity-clubhouse', 'Clubhouse')">
+                            <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <div>
+                                <h4 class="font-bold text-[15px] tracking-wide">Clubhouse</h4>
+                                <p class="text-[11px] opacity-80 font-medium">Well Connected</p>
+                            </div>
+                            <div
+                                class="amenity-tab-arrow hidden absolute -right-3 top-1/2 -translate-y-1/2 w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-l-[12px] border-l-[#ebd373]">
+                            </div>
+                        </button>
+                    </div>
+                    <div class="lg:col-span-8 bg-[#161616] p-8 md:p-12 rounded-lg shadow-2xl" data-gsap="fade-left">
+                        <div class="border-l-2 border-[#ebd373] pl-4 mb-12">
+                            <h3 id="amenity-title-display" class="text-2xl text-[#ebd373] font-serif tracking-wide">
+                                Active Lifestyle</h3>
+                        </div>
+
+                        <div id="amenity-active"
+                            class="amenity-tab-content block opacity-100 transition-opacity duration-500">
+                            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-y-12 gap-x-6">
+                                <div class="group flex flex-col items-center cursor-pointer">
+                                    <div
+                                        class="w-[72px] h-[72px] rounded-full border border-gray-600 group-hover:border-[#ebd373] group-hover:bg-[#ebd373] flex items-center justify-center mb-4 transition-all duration-300 shadow-lg">
+                                        <svg class="w-8 h-8 text-[#ebd373] group-hover:text-[#111] transition-colors"
+                                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                                d="M8 6h8M8 10h8m-4-4v8m-6 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                            </path>
+                                        </svg></div>
+                                    <span class="text-sm text-gray-300 font-medium text-center">Basketball Court</span>
+                                </div>
+                                <div class="group flex flex-col items-center cursor-pointer">
+                                    <div
+                                        class="w-[72px] h-[72px] rounded-full border border-[#ebd373] bg-[#ebd373] flex items-center justify-center mb-4 transition-all duration-300 shadow-[0_0_15px_rgba(235,211,115,0.4)]">
+                                        <svg class="w-8 h-8 text-[#111]" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                                d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z">
+                                            </path>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                                d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg></div>
+                                    <span class="text-sm text-white font-medium text-center">Football Turf</span>
+                                </div>
+                                <div class="group flex flex-col items-center cursor-pointer">
+                                    <div
+                                        class="w-[72px] h-[72px] rounded-full border border-gray-600 group-hover:border-[#ebd373] group-hover:bg-[#ebd373] flex items-center justify-center mb-4 transition-all duration-300 shadow-lg">
+                                        <svg class="w-8 h-8 text-[#ebd373] group-hover:text-[#111] transition-colors"
+                                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                                d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm14 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z">
+                                            </path>
+                                        </svg></div>
+                                    <span class="text-sm text-gray-300 font-medium text-center">Mini Cricket Turf</span>
+                                </div>
+                                <div class="group flex flex-col items-center cursor-pointer">
+                                    <div
+                                        class="w-[72px] h-[72px] rounded-full border border-gray-600 group-hover:border-[#ebd373] group-hover:bg-[#ebd373] flex items-center justify-center mb-4 transition-all duration-300 shadow-lg">
+                                        <svg class="w-8 h-8 text-[#ebd373] group-hover:text-[#111] transition-colors"
+                                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                                d="M13.73 21a2 2 0 01-3.46 0m.73-14V3m0 0a2 2 0 10-4 0 2 2 0 004 0zm0 4a2 2 0 10-4 0 2 2 0 004 0zM7 10h10M7 14h10">
+                                            </path>
+                                        </svg></div>
+                                    <span class="text-sm text-gray-300 font-medium text-center">Pickleball Court</span>
+                                </div>
+                                <div class="group flex flex-col items-center cursor-pointer">
+                                    <div
+                                        class="w-[72px] h-[72px] rounded-full border border-gray-600 group-hover:border-[#ebd373] group-hover:bg-[#ebd373] flex items-center justify-center mb-4 transition-all duration-300 shadow-lg">
+                                        <svg class="w-8 h-8 text-[#ebd373] group-hover:text-[#111] transition-colors"
+                                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                                d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                                d="M12 3v2m0 14v2m9-9h-2M5 12H3"></path>
+                                        </svg></div>
+                                    <span class="text-sm text-gray-300 font-medium text-center">Archery</span>
+                                </div>
+                                <div class="group flex flex-col items-center cursor-pointer">
+                                    <div
+                                        class="w-[72px] h-[72px] rounded-full border border-gray-600 group-hover:border-[#ebd373] group-hover:bg-[#ebd373] flex items-center justify-center mb-4 transition-all duration-300 shadow-lg">
+                                        <svg class="w-8 h-8 text-[#ebd373] group-hover:text-[#111] transition-colors"
+                                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                                d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z">
+                                            </path>
+                                        </svg></div>
+                                    <span class="text-sm text-gray-300 font-medium text-center">Rock Climbing
+                                        Wall</span>
+                                </div>
+                                <div class="group flex flex-col items-center cursor-pointer">
+                                    <div
+                                        class="w-[72px] h-[72px] rounded-full border border-gray-600 group-hover:border-[#ebd373] group-hover:bg-[#ebd373] flex items-center justify-center mb-4 transition-all duration-300 shadow-lg">
+                                        <svg class="w-8 h-8 text-[#ebd373] group-hover:text-[#111] transition-colors"
+                                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                                d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
+                                        </svg></div>
+                                    <span class="text-sm text-gray-300 font-medium text-center">Obstacle /<br>Adventure
+                                        Course</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="amenity-community"
+                            class="amenity-tab-content hidden opacity-0 transition-opacity duration-500">
+                            <div
+                                class="h-[300px] flex items-center justify-center text-gray-500 border border-dashed border-gray-800 rounded-lg">
+                                Community & Wellness Content</div>
+                        </div>
+                        <div id="amenity-clubhouse"
+                            class="amenity-tab-content hidden opacity-0 transition-opacity duration-500">
+                            <div
+                                class="h-[300px] flex items-center justify-center text-gray-500 border border-dashed border-gray-800 rounded-lg">
+                                Clubhouse Content</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="location" class="scroll-section py-24 px-4 md:px-8 bg-[#0a0a0a] relative overflow-hidden">
+            <div class="max-w-[1400px] mx-auto relative">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full text-center pointer-events-none select-none z-0"
+                    data-gsap="fade-down">
+                    <h2 class="text-6xl md:text-8xl lg:text-[120px] font-serif font-medium text-transparent leading-none"
+                        style="-webkit-text-stroke: 1px rgba(255, 255, 255, 0.04); letter-spacing: 0.05em; white-space: nowrap;">
+                        LOCATION ADVANTAGES</h2>
+                </div>
+                <div class="relative z-10 text-center mb-16 mt-8 md:mt-12" data-gsap="fade-up">
+                    <h2 class="text-4xl md:text-5xl font-serif text-[#ebd373]">Location Advantages</h2>
+                </div>
+
+                <div class="flex justify-center flex-wrap gap-4 mb-12 relative z-10" data-gsap="fade-up"
+                    data-delay="100">
+                    <button
+                        class="loc-tab-btn bg-transparent text-gray-400 border border-[#ebd373]/40 hover:border-[#ebd373] hover:text-white px-6 py-2.5 text-xs tracking-widest rounded-md relative transition-all"
+                        onclick="openLocTab(event, 'loc-schools')">Schools<div
+                            class="loc-tab-arrow hidden absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-t-[6px] border-t-[#ebd373] border-r-[6px] border-r-transparent">
+                        </div></button>
+                    <button
+                        class="loc-tab-btn bg-transparent text-gray-400 border border-[#ebd373]/40 hover:border-[#ebd373] hover:text-white px-6 py-2.5 text-xs tracking-widest rounded-md relative transition-all"
+                        onclick="openLocTab(event, 'loc-companies')">Companies<div
+                            class="loc-tab-arrow hidden absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-t-[6px] border-t-[#ebd373] border-r-[6px] border-r-transparent">
+                        </div></button>
+                    <button
+                        class="loc-tab-btn bg-[#ebd373] text-[#111] font-semibold border border-transparent px-6 py-2.5 text-xs tracking-widest rounded-md relative transition-all"
+                        onclick="openLocTab(event, 'loc-hospital')">Hospital<div
+                            class="loc-tab-arrow absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-t-[6px] border-t-[#ebd373] border-r-[6px] border-r-transparent">
+                        </div></button>
+                    <button
+                        class="loc-tab-btn bg-transparent text-gray-400 border border-[#ebd373]/40 hover:border-[#ebd373] hover:text-white px-6 py-2.5 text-xs tracking-widest rounded-md relative transition-all"
+                        onclick="openLocTab(event, 'loc-road')">Road View<div
+                            class="loc-tab-arrow hidden absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-t-[6px] border-t-[#ebd373] border-r-[6px] border-r-transparent">
+                        </div></button>
+                    <button
+                        class="loc-tab-btn bg-transparent text-gray-400 border border-[#ebd373]/40 hover:border-[#ebd373] hover:text-white px-6 py-2.5 text-xs tracking-widest rounded-md relative transition-all"
+                        onclick="openLocTab(event, 'loc-recreational')">Recreational<div
+                            class="loc-tab-arrow hidden absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-t-[6px] border-t-[#ebd373] border-r-[6px] border-r-transparent">
+                        </div></button>
+                    <button
+                        class="loc-tab-btn bg-transparent text-gray-400 border border-[#ebd373]/40 hover:border-[#ebd373] hover:text-white px-6 py-2.5 text-xs tracking-widest rounded-md relative transition-all"
+                        onclick="openLocTab(event, 'loc-colleges')">Colleges<div
+                            class="loc-tab-arrow hidden absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-t-[6px] border-t-[#ebd373] border-r-[6px] border-r-transparent">
+                        </div></button>
+                    <button
+                        class="loc-tab-btn bg-transparent text-gray-400 border border-[#ebd373]/40 hover:border-[#ebd373] hover:text-white px-6 py-2.5 text-xs tracking-widest rounded-md relative transition-all"
+                        onclick="openLocTab(event, 'loc-connectivity')">Connectivity<div
+                            class="loc-tab-arrow hidden absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-t-[6px] border-t-[#ebd373] border-r-[6px] border-r-transparent">
+                        </div></button>
+                </div>
+
+                <div class="relative z-10 max-w-[1100px] mx-auto bg-[#131313] rounded-2xl p-8 md:p-12 shadow-2xl"
+                    data-gsap="fade-up" data-delay="200">
+                    <div id="loc-hospital"
+                        class="loc-tab-content block opacity-100 transition-opacity duration-500 ease-in-out">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start mb-16">
+                            <div data-gsap="fade-right" data-delay="300">
+                                <div class="border-l-2 border-[#ebd373] pl-4 mb-6">
+                                    <h3 class="text-2xl font-serif text-white tracking-wide">Nearest Hospital</h3>
+                                </div>
+                                <div
+                                    class="relative rounded-xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.5)] bg-gray-800 border border-gray-700">
+                                    <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                        loading="lazy" decoding="async" alt="Hospital Map"
+                                        class="w-full h-[300px] md:h-[350px] object-cover mix-blend-luminosity opacity-80" />
+                                    <div class="absolute right-4 top-1/2 -translate-y-1/2 flex flex-col gap-1">
+                                        <button
+                                            class="bg-[#111] text-gray-400 hover:text-white w-8 h-8 flex items-center justify-center text-lg shadow-lg">+</button>
+                                        <button
+                                            class="bg-[#111] text-gray-400 hover:text-white w-8 h-8 flex items-center justify-center text-lg shadow-lg">-</button>
+                                        <button
+                                            class="bg-[#111] text-gray-400 hover:text-white w-8 h-8 flex items-center justify-center text-sm shadow-lg mt-1">◇</button>
+                                    </div>
+                                    <div
+                                        class="absolute bottom-6 left-6 right-16 bg-[#161616]/90 backdrop-blur-sm border-l-[3px] border-[#ebd373] px-6 py-4 shadow-xl">
+                                        <h4 class="text-white font-bold tracking-wide">Dhanvantri Ayurvedic Clinic</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lg:pt-14" data-gsap="fade-left" data-delay="400">
+                                <ul class="flex flex-col gap-6 text-gray-300 text-sm">
+                                    <li class="flex items-center gap-4"><span
+                                            class="w-6 h-6 rounded-full border border-[#ebd373] flex items-center justify-center flex-shrink-0"><svg
+                                                class="w-3 h-3 text-[#ebd373]" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M5 13l4 4L19 7"></path>
+                                            </svg></span><span>Trusted Brand</span></li>
+                                    <li class="flex items-center gap-4"><span
+                                            class="w-6 h-6 rounded-full border border-[#ebd373] flex items-center justify-center flex-shrink-0"><svg
+                                                class="w-3 h-3 text-[#ebd373]" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                                </path>
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                            </svg></span><span>Strategic Location</span></li>
+                                    <li class="flex items-center gap-4"><span
+                                            class="w-6 h-6 rounded-full border border-[#ebd373] flex items-center justify-center flex-shrink-0"><svg
+                                                class="w-3 h-3 text-[#ebd373]" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                            </svg></span><span>Excellent Connectivity</span></li>
+                                    <li class="flex items-center gap-4"><span
+                                            class="w-6 h-6 rounded-full border border-[#ebd373] flex items-center justify-center flex-shrink-0"><svg
+                                                class="w-3 h-3 text-[#ebd373]" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                                                </path>
+                                            </svg></span><span>High Appreciation And Investment Potential</span></li>
+                                    <li class="flex items-center gap-4"><span
+                                            class="w-6 h-6 rounded-full border border-[#ebd373] flex items-center justify-center flex-shrink-0"><svg
+                                                class="w-3 h-3 text-[#ebd373]" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z">
+                                                </path>
+                                            </svg></span><span>Green And Open Spaces</span></li>
+                                    <li class="flex items-center gap-4"><span
+                                            class="w-6 h-6 rounded-full border border-[#ebd373] flex items-center justify-center flex-shrink-0"><svg
+                                                class="w-3 h-3 text-[#ebd373]" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5">
+                                                </path>
+                                            </svg></span><span>World Class Sports Infrastructure For All Age
+                                            Groups</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div data-gsap="fade-up" data-delay="500">
+                            <div class="border-l-2 border-[#ebd373] pl-4 mb-6">
+                                <h3 class="text-2xl font-serif text-white tracking-wide">Connectivity</h3>
+                            </div>
+                            <div class="flex gap-4 overflow-x-auto pb-4 no-scrollbar">
+                                <div
+                                    class="bg-[#111] border border-gray-800 p-4 rounded-xl flex flex-col gap-4 w-[140px] flex-shrink-0 relative overflow-hidden group hover:border-[#ebd373]/50 transition-colors">
+                                    <div
+                                        class="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-[#ebd373] to-transparent opacity-50">
+                                    </div>
+                                    <div
+                                        class="bg-gray-800/40 w-10 h-10 rounded-lg flex flex-col items-center justify-center text-[#ebd373]">
+                                        <svg class="w-4 h-4 mb-0.5" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg><span class="text-[9px] font-bold">8 min</span></div>
+                                    <p class="text-[10px] text-gray-400 leading-tight">Dhanvantri Ayurvedic Clinic</p>
+                                </div>
+                                <div
+                                    class="bg-[#111] border border-gray-800 p-4 rounded-xl flex flex-col gap-4 w-[140px] flex-shrink-0 relative overflow-hidden group hover:border-[#ebd373]/50 transition-colors">
+                                    <div
+                                        class="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-[#ebd373] to-transparent opacity-50">
+                                    </div>
+                                    <div
+                                        class="bg-gray-800/40 w-10 h-10 rounded-lg flex flex-col items-center justify-center text-[#ebd373]">
+                                        <svg class="w-4 h-4 mb-0.5" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg><span class="text-[9px] font-bold">10 min</span></div>
+                                    <p class="text-[10px] text-gray-400 leading-tight">Ayurvedic Hospital At Madhure</p>
+                                </div>
+                                <div
+                                    class="bg-[#111] border border-gray-800 p-4 rounded-xl flex flex-col gap-4 w-[140px] flex-shrink-0 relative overflow-hidden group hover:border-[#ebd373]/50 transition-colors">
+                                    <div
+                                        class="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-[#ebd373] to-transparent opacity-50">
+                                    </div>
+                                    <div
+                                        class="bg-gray-800/40 w-10 h-10 rounded-lg flex flex-col items-center justify-center text-[#ebd373]">
+                                        <svg class="w-4 h-4 mb-0.5" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg><span class="text-[9px] font-bold">12 min</span></div>
+                                    <p class="text-[10px] text-gray-400 leading-tight">Sri Paripoorna Sanathana Ayurveda
+                                        Medical College</p>
+                                </div>
+                                <div
+                                    class="bg-[#111] border border-gray-800 p-4 rounded-xl flex flex-col gap-4 w-[140px] flex-shrink-0 relative overflow-hidden group hover:border-[#ebd373]/50 transition-colors">
+                                    <div
+                                        class="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-[#ebd373] to-transparent opacity-50">
+                                    </div>
+                                    <div
+                                        class="bg-gray-800/40 w-10 h-10 rounded-lg flex flex-col items-center justify-center text-[#ebd373]">
+                                        <svg class="w-4 h-4 mb-0.5" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg><span class="text-[9px] font-bold">10 min</span></div>
+                                    <p class="text-[10px] text-gray-400 leading-tight">Maruthi Medicals And General
+                                        Store</p>
+                                </div>
+                                <div
+                                    class="bg-[#111] border border-gray-800 p-4 rounded-xl flex flex-col gap-4 w-[140px] flex-shrink-0 relative overflow-hidden group hover:border-[#ebd373]/50 transition-colors">
+                                    <div
+                                        class="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-[#ebd373] to-transparent opacity-50">
+                                    </div>
+                                    <div
+                                        class="bg-gray-800/40 w-10 h-10 rounded-lg flex flex-col items-center justify-center text-[#ebd373]">
+                                        <svg class="w-4 h-4 mb-0.5" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg><span class="text-[9px] font-bold">18 min</span></div>
+                                    <p class="text-[10px] text-gray-400 leading-tight">VCNR Hospital</p>
+                                </div>
+                                <div
+                                    class="bg-[#111] border border-gray-800 p-4 rounded-xl flex flex-col gap-4 w-[140px] flex-shrink-0 relative overflow-hidden group hover:border-[#ebd373]/50 transition-colors">
+                                    <div
+                                        class="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-[#ebd373] to-transparent opacity-50">
+                                    </div>
+                                    <div
+                                        class="bg-gray-800/40 w-10 h-10 rounded-lg flex flex-col items-center justify-center text-[#ebd373]">
+                                        <svg class="w-4 h-4 mb-0.5" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg><span class="text-[9px] font-bold">10 min</span></div>
+                                    <p class="text-[10px] text-gray-400 leading-tight">Aasare Hospital</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="loc-schools"
+                        class="loc-tab-content hidden opacity-0 transition-opacity duration-500 ease-in-out">
+                        <div
+                            class="h-[400px] flex items-center justify-center text-gray-500 border border-dashed border-gray-800 rounded-xl">
+                            Schools Content</div>
+                    </div>
+                    <div id="loc-companies"
+                        class="loc-tab-content hidden opacity-0 transition-opacity duration-500 ease-in-out">
+                        <div
+                            class="h-[400px] flex items-center justify-center text-gray-500 border border-dashed border-gray-800 rounded-xl">
+                            Companies Content</div>
+                    </div>
+                    <div id="loc-road"
+                        class="loc-tab-content hidden opacity-0 transition-opacity duration-500 ease-in-out">
+                        <div
+                            class="h-[400px] flex items-center justify-center text-gray-500 border border-dashed border-gray-800 rounded-xl">
+                            Road View Content</div>
+                    </div>
+                    <div id="loc-recreational"
+                        class="loc-tab-content hidden opacity-0 transition-opacity duration-500 ease-in-out">
+                        <div
+                            class="h-[400px] flex items-center justify-center text-gray-500 border border-dashed border-gray-800 rounded-xl">
+                            Recreational Content</div>
+                    </div>
+                    <div id="loc-colleges"
+                        class="loc-tab-content hidden opacity-0 transition-opacity duration-500 ease-in-out">
+                        <div
+                            class="h-[400px] flex items-center justify-center text-gray-500 border border-dashed border-gray-800 rounded-xl">
+                            Colleges Content</div>
+                    </div>
+                    <div id="loc-connectivity"
+                        class="loc-tab-content hidden opacity-0 transition-opacity duration-500 ease-in-out">
+                        <div
+                            class="h-[400px] flex items-center justify-center text-gray-500 border border-dashed border-gray-800 rounded-xl">
+                            Connectivity Content</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="scroll-section py-24 px-4 md:px-8 bg-[#111111] relative overflow-hidden">
+            <div class="max-w-[1400px] mx-auto relative">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full text-center pointer-events-none select-none z-0"
+                    data-gsap="fade-down">
+                    <h2 class="text-6xl md:text-8xl lg:text-[120px] font-serif font-medium text-transparent leading-none"
+                        style="-webkit-text-stroke: 1px rgba(255, 255, 255, 0.04); letter-spacing: 0.05em; white-space: nowrap;">
+                        OUR GALLERY</h2>
+                </div>
+                <div class="relative z-10 text-center mb-16 mt-8 md:mt-12" data-gsap="fade-up">
+                    <h2 class="text-4xl md:text-5xl font-serif text-[#ebd373]">Our Gallery</h2>
+                </div>
+
+                <div class="flex justify-center flex-wrap gap-4 mb-16 relative z-10" data-gsap="fade-up"
+                    data-delay="100">
+                    <button
+                        class="gal-tab-btn bg-[#ebd373] text-[#111] font-semibold border border-transparent px-6 py-3 text-xs tracking-widest rounded-md relative transition-all focus:outline-none"
+                        onclick="openGalTab(event, 'gal-playzone')">
+                        Play Zone<div
+                            class="gal-tab-arrow absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[8px] border-l-transparent border-t-[8px] border-t-[#ebd373] border-r-[8px] border-r-transparent">
+                        </div>
+                    </button>
+                    <button
+                        class="gal-tab-btn bg-transparent text-gray-400 border border-[#ebd373]/40 hover:border-[#ebd373] hover:text-white px-6 py-3 text-xs tracking-widest rounded-md relative transition-all focus:outline-none"
+                        onclick="openGalTab(event, 'gal-wellness')">
+                        <span class="block max-w-[150px] mx-auto text-center leading-tight">Wellness And<br>Community
+                            Zone</span>
+                        <div
+                            class="gal-tab-arrow hidden absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[8px] border-l-transparent border-t-[8px] border-t-[#ebd373] border-r-[8px] border-r-transparent">
+                        </div>
+                    </button>
+                    <button
+                        class="gal-tab-btn bg-transparent text-gray-400 border border-[#ebd373]/40 hover:border-[#ebd373] hover:text-white px-6 py-3 text-xs tracking-widest rounded-md relative transition-all focus:outline-none"
+                        onclick="openGalTab(event, 'gal-clubhouse')">
+                        Clubhouse<div
+                            class="gal-tab-arrow hidden absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[8px] border-l-transparent border-t-[8px] border-t-[#ebd373] border-r-[8px] border-r-transparent">
+                        </div>
+                    </button>
+                    <button
+                        class="gal-tab-btn bg-transparent text-gray-400 border border-[#ebd373]/40 hover:border-[#ebd373] hover:text-white px-6 py-3 text-xs tracking-widest rounded-md relative transition-all focus:outline-none"
+                        onclick="openGalTab(event, 'gal-landscape')">
+                        <span class="block max-w-[150px] mx-auto text-center leading-tight">Landscape<br>Views</span>
+                        <div
+                            class="gal-tab-arrow hidden absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[8px] border-l-transparent border-t-[8px] border-t-[#ebd373] border-r-[8px] border-r-transparent">
+                        </div>
+                    </button>
+                    <button
+                        class="gal-tab-btn bg-transparent text-gray-400 border border-[#ebd373]/40 hover:border-[#ebd373] hover:text-white px-6 py-3 text-xs tracking-widest rounded-md relative transition-all focus:outline-none"
+                        onclick="openGalTab(event, 'gal-infra')">
+                        Infrastructure<div
+                            class="gal-tab-arrow hidden absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[8px] border-l-transparent border-t-[8px] border-t-[#ebd373] border-r-[8px] border-r-transparent">
+                        </div>
+                    </button>
+                </div>
+
+                <div class="relative z-10 max-w-7xl mx-auto" data-gsap="fade-up" data-delay="200">
+                    <div id="gal-playzone"
+                        class="gal-tab-content block opacity-100 transition-opacity duration-500 ease-in-out">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <a href="https://images.unsplash.com/photo-1596422846543-75c6fc197f0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80"
+                                class="custom-gallery-item relative block rounded-2xl overflow-hidden group cursor-pointer border border-gray-800">
+                                <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                    loading="lazy" decoding="async" alt="Playzone"
+                                    class="w-full h-[260px] object-cover transition-transform duration-700 group-hover:scale-110" />
+                                <div
+                                    class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500">
+                                </div>
+                                <div
+                                    class="absolute bottom-4 left-4 bg-[#111]/90 border-l-[3px] border-[#ebd373] px-3 py-1 shadow-lg">
+                                    <p class="text-[11px] text-white tracking-widest uppercase font-medium">Playzone 1
+                                    </p>
+                                </div>
+                            </a>
+                            <a href="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80"
+                                class="custom-gallery-item relative block rounded-2xl overflow-hidden group cursor-pointer border border-gray-800">
+                                <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                    loading="lazy" decoding="async" alt="Sports Court"
+                                    class="w-full h-[260px] object-cover transition-transform duration-700 group-hover:scale-110" />
+                                <div
+                                    class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500">
+                                </div>
+                            </a>
+                            <a href="https://images.unsplash.com/photo-1587280501635-6cb10cece824?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80"
+                                class="custom-gallery-item relative block rounded-2xl overflow-hidden group cursor-pointer border border-gray-800">
+                                <img src="https://images.unsplash.com/photo-1587280501635-6cb10cece824?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                    loading="lazy" decoding="async" alt="Cricket Net"
+                                    class="w-full h-[260px] object-cover transition-transform duration-700 group-hover:scale-110" />
+                                <div
+                                    class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500">
+                                </div>
+                            </a>
+                            <a href="https://images.unsplash.com/photo-1511497584788-876760111969?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80"
+                                class="custom-gallery-item relative block rounded-2xl overflow-hidden group cursor-pointer border border-gray-800">
+                                <img src="https://images.unsplash.com/photo-1511497584788-876760111969?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                    loading="lazy" decoding="async" alt="Archery Zone"
+                                    class="w-full h-[260px] object-cover transition-transform duration-700 group-hover:scale-110" />
+                                <div
+                                    class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500">
+                                </div>
+                            </a>
+                            <a href="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80"
+                                class="custom-gallery-item relative block rounded-2xl overflow-hidden group cursor-pointer border border-gray-800">
+                                <img src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                    loading="lazy" decoding="async" alt="Field"
+                                    class="w-full h-[260px] object-cover transition-transform duration-700 group-hover:scale-110" />
+                                <div
+                                    class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500">
+                                </div>
+                            </a>
+                            <a href="https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80"
+                                class="custom-gallery-item relative block rounded-2xl overflow-hidden group cursor-pointer border border-gray-800">
+                                <img src="https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                    loading="lazy" decoding="async" alt="Climbing Wall"
+                                    class="w-full h-[260px] object-cover transition-transform duration-700 group-hover:scale-110" />
+                                <div
+                                    class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500">
+                                </div>
+                            </a>
+                            <a href="https://images.unsplash.com/photo-1629019724060-f7034c442431?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80"
+                                class="custom-gallery-item relative block rounded-2xl overflow-hidden group cursor-pointer border border-gray-800">
+                                <img src="https://images.unsplash.com/photo-1629019724060-f7034c442431?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                    loading="lazy" decoding="async" alt="Sand Volleyball"
+                                    class="w-full h-[260px] object-cover transition-transform duration-700 group-hover:scale-110" />
+                                <div
+                                    class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500">
+                                </div>
+                            </a>
+                            <a href="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80"
+                                class="custom-gallery-item relative block rounded-2xl overflow-hidden group cursor-pointer border border-gray-800">
+                                <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                    loading="lazy" decoding="async" alt="Clubhouse Area"
+                                    class="w-full h-[260px] object-cover transition-transform duration-700 group-hover:scale-110" />
+                                <div
+                                    class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div id="gal-wellness"
+                        class="gal-tab-content hidden opacity-0 transition-opacity duration-500 ease-in-out">
+                        <div
+                            class="h-[400px] flex items-center justify-center text-gray-500 border border-dashed border-gray-800 rounded-xl">
+                            Wellness Content</div>
+                    </div>
+                    <div id="gal-clubhouse"
+                        class="gal-tab-content hidden opacity-0 transition-opacity duration-500 ease-in-out">
+                        <div
+                            class="h-[400px] flex items-center justify-center text-gray-500 border border-dashed border-gray-800 rounded-xl">
+                            Clubhouse Content</div>
+                    </div>
+                    <div id="gal-landscape"
+                        class="gal-tab-content hidden opacity-0 transition-opacity duration-500 ease-in-out">
+                        <div
+                            class="h-[400px] flex items-center justify-center text-gray-500 border border-dashed border-gray-800 rounded-xl">
+                            Landscape Content</div>
+                    </div>
+                    <div id="gal-infra"
+                        class="gal-tab-content hidden opacity-0 transition-opacity duration-500 ease-in-out">
+                        <div
+                            class="h-[400px] flex items-center justify-center text-gray-500 border border-dashed border-gray-800 rounded-xl">
+                            Infrastructure Content</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-us"
+            class="scroll-section py-24 px-8 md:px-16 lg:px-24 bg-[#0a0a0a] relative overflow-hidden border-t border-gray-800/50">
+            <div class="max-w-[1400px] mx-auto relative">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full text-center pointer-events-none select-none z-0"
+                    data-gsap="fade-down">
+                    <h2 class="text-6xl md:text-8xl lg:text-[120px] font-serif font-medium text-transparent leading-none"
+                        style="-webkit-text-stroke: 1px rgba(255, 255, 255, 0.04); letter-spacing: 0.05em; white-space: nowrap;">
+                        ABOUT US</h2>
+                </div>
+                <div class="relative z-10 text-center mb-20 mt-8 md:mt-12" data-gsap="fade-up">
+                    <h2 class="text-4xl md:text-5xl font-serif text-[#ebd373]">About Us</h2>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center relative z-10">
+                    <div class="lg:col-span-6 relative" data-gsap="fade-right">
+                        <div class="absolute -left-6 md:-left-10 -top-6 -bottom-6 w-1/2 bg-[#ebd373] z-0 shadow-lg">
+                        </div>
+                        <div class="relative z-10 overflow-hidden shadow-2xl border border-gray-800">
+                            <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                                loading="lazy" decoding="async" alt="About Zuari"
+                                class="w-full h-[350px] md:h-[450px] object-cover hover:scale-105 transition-transform duration-700" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none">
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center z-20 group cursor-pointer">
+                                <div
+                                    class="w-16 h-16 rounded-full bg-black/40 backdrop-blur-md border border-[#ebd373]/50 flex items-center justify-center group-hover:bg-[#ebd373]/20 group-hover:scale-110 transition-all duration-300 shadow-xl">
+                                    <svg class="w-6 h-6 text-[#ebd373] ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-6 flex flex-col gap-6" data-gsap="fade-left">
+                        <div class="border-l-2 border-[#ebd373] pl-4 mb-4">
+                            <h3 class="text-3xl font-serif text-white tracking-wide">The Legacy of Zuari</h3>
+                        </div>
+                        <p class="text-gray-300 text-[14px] leading-[1.8] font-light">
+                            Zuari Infraworld India Limited (ZIIL) is the dedicated real estate arm of Zuari Industries
+                            Limited, part of the esteemed KK Birla Group, carrying forward a legacy that is deeply
+                            interwoven with India's growth story. Rooted in the visionary leadership of the late
+                            <strong>Dr. K. K. Birla</strong>, whose pioneering contributions helped shape key sectors of
+                            the nation, and guided today by eminent industrialist <strong>Mr. Saroj Kumar
+                                Poddar</strong>, Zuari Infraworld stands as a reflection of over eight decades of trust,
+                            excellence, and nation-building.
+                        </p>
+                        <p class="text-gray-300 text-[14px] leading-[1.8] font-light mb-4">
+                            As a key pillar of Zuari, ZIIL brings this rich heritage into the real estate space,
+                            creating thoughtfully designed residential and commercial developments that blend
+                            innovation, sustainability, and modern living. With a strong foundation built on integrity
+                            and a forward-looking vision, Zuari InfraWorld is committed to shaping contemporary urban
+                            landscapes while honoring the enduring values of its illustrious lineage.
+                        </p>
+                        <div>
+                            <button
+                                class="bg-[#ebd373] hover:bg-yellow-500 text-[#111] font-bold px-8 py-3 text-xs uppercase tracking-widest transition-colors shadow-lg">Learn
+                                More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="relative pt-24 pb-12 bg-[#0a0a0a] overflow-hidden border-t border-gray-800/50">
+            <div class="absolute bottom-0 left-0 w-full h-48 opacity-[0.15] pointer-events-none skyline-bg"></div>
+
+            <div class="max-w-[1400px] mx-auto px-8 md:px-16 lg:px-24 relative z-10">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-24">
+
+                    <div class="md:col-span-5" data-gsap="fade-right">
+                        <h2 class="text-3xl font-sans text-[#ebd373] tracking-[0.15em] uppercase mb-6 font-light">
+                            Zuari Kineti<span class="font-serif italic font-normal">X</span>
+                        </h2>
+                        <div class="border-l-2 border-[#ebd373] pl-4 mb-8">
+                            <p class="text-gray-400 text-[13px] leading-relaxed font-light">
+                                Dedicated To The Curation Of The World's Most Prestigious Residential Assets. Our
+                                Precision-Engineered Approach Ensures Discretion And Excellence For The Discerning
+                                Global Elite.
+                            </p>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="#"
+                                class="w-9 h-9 rounded-full border border-[#ebd373] text-[#ebd373] flex items-center justify-center hover:bg-[#ebd373] hover:text-[#111] transition-all duration-300"><svg
+                                    class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9">
+                                    </path>
+                                </svg></a>
+                            <a href="#"
+                                class="w-9 h-9 rounded-full border border-[#ebd373] text-[#ebd373] flex items-center justify-center hover:bg-[#ebd373] hover:text-[#111] transition-all duration-300"><svg
+                                    class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92c0-1.61-1.31-2.92-2.92-2.92z" />
+                                </svg></a>
+                            <a href="#"
+                                class="w-9 h-9 rounded-full bg-[#ebd373] text-[#111] border border-[#ebd373] flex items-center justify-center hover:bg-transparent hover:text-[#ebd373] transition-all duration-300 shadow-[0_0_10px_rgba(235,211,115,0.4)]"><svg
+                                    class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                                </svg></a>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-4" data-gsap="fade-up" data-delay="200">
+                        <h3 class="text-[#ebd373] font-serif text-[18px] mb-6 tracking-wide">Contact Us</h3>
+                        <ul class="flex flex-col gap-4 text-gray-400 text-[13px] font-light">
+                            <li class="flex items-start gap-3"><svg class="w-4 h-4 text-[#ebd373] flex-shrink-0 mt-0.5"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                    </path>
+                                </svg><span>Sales: +1 (800) LUX-HOME</span></li>
+                            <li class="flex items-start gap-3"><svg class="w-4 h-4 text-[#ebd373] flex-shrink-0 mt-0.5"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                    </path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg><span>Site Address: 722 Fifth Avenue,<br>NY</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="md:col-span-3" data-gsap="fade-left" data-delay="400">
+                        <h3 class="text-[#ebd373] font-serif text-[18px] mb-6 tracking-wide">Information</h3>
+                        <ul class="flex flex-col gap-3 text-gray-400 text-[13px] font-light">
+                            <li><a href="#"
+                                    class="hover:text-[#ebd373] transition-colors flex items-center gap-2 group"><span
+                                        class="text-[#ebd373] text-[8px] group-hover:translate-x-1 transition-transform">▶</span>
+                                    Disclaimer</a></li>
+                            <li><a href="#"
+                                    class="hover:text-[#ebd373] transition-colors flex items-center gap-2 group"><span
+                                        class="text-[#ebd373] text-[8px] group-hover:translate-x-1 transition-transform">▶</span>
+                                    Privacy Policy</a></li>
+                            <li><a href="#"
+                                    class="hover:text-[#ebd373] transition-colors flex items-center gap-2 group"><span
+                                        class="text-[#ebd373] text-[8px] group-hover:translate-x-1 transition-transform">▶</span>
+                                    Terms Of Service</a></li>
+                            <li><a href="#"
+                                    class="hover:text-[#ebd373] transition-colors flex items-center gap-2 group"><span
+                                        class="text-[#ebd373] text-[8px] group-hover:translate-x-1 transition-transform">▶</span>
+                                    Property Inquiries</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <div id="custom-lightbox"
+        class="fixed inset-0 z-[100] bg-black/95 hidden flex-col items-center justify-center opacity-0 backdrop-blur-md">
+        <button id="lb-close"
+            class="absolute top-6 right-6 text-white hover:text-[#ebd373] transition-colors z-50 cursor-pointer p-2">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <button id="lb-prev"
+            class="absolute left-6 top-1/2 -translate-y-1/2 text-white hover:text-[#ebd373] transition-colors z-50 cursor-pointer p-2">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+        </button>
+        <button id="lb-next"
+            class="absolute right-6 top-1/2 -translate-y-1/2 text-white hover:text-[#ebd373] transition-colors z-50 cursor-pointer p-2">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+        </button>
+
+        <div class="relative max-w-6xl w-full h-[80vh] flex items-center justify-center px-12">
+            <img id="lb-img" src="" class="max-w-full max-h-full object-contain rounded-lg shadow-2xl" />
+        </div>
+
+        <div id="lb-caption"
+            class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white font-serif tracking-widest text-sm uppercase">
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js" defer></script>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
