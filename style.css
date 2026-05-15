@@ -1,80 +1,140 @@
 /* Custom font import */
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap');
-        
-        .font-serif { font-family: 'Playfair Display', serif; }
-        .font-sans { font-family: 'Inter', sans-serif; }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-        /* Custom scrollbar for a darker theme */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #0a0a0a; }
-        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #a8894d; }
-        
-        /* Hide scrollbar for horizontal scrolling containers */
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+.font-serif {
+    font-family: 'Noto Serif', serif;
+}
 
-        /* Skyline Base64 SVG Background for Footer */
-        .skyline-bg {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 100' preserveAspectRatio='none'%3E%3Cpath fill='none' stroke='%23444' stroke-width='1.5' d='M0,100 v-20 h10 v-40 h20 v20 h10 v-30 h15 v40 h20 v-60 h25 v30 h10 v20 h20 v-50 h15 v-20 h20 v60 h15 v-30 h20 v50 h10 v-40 h25 v20 h15 v-50 h20 v40 h15 v-20 h20 v60 h10 v-30 h25 v40 h20 v-70 h20 v30 h15 v20 h15 v-40 h20 v50 h10 v-20 h15 v40 h20 v-60 h25 v80' /%3E%3Cpath fill='none' stroke='%23222' stroke-width='1' d='M0,100 v-30 h15 v-20 h15 v40 h20 v-50 h25 v30 h10 v-40 h20 v50 h15 v-30 h20 v20 h10 v-60 h25 v40 h15 v-20 h20 v60 h15 v-40 h20 v30 h10 v-50 h25 v60 h15 v-30 h20 v20 h15 v-40 h20 v70 h10 v-20 h15 v30' /%3E%3C/svg%3E");
-            background-size: 800px 100%;
-            background-repeat: repeat-x;
-            background-position: bottom;
-        }
+.font-sans {
+    font-family: 'Poppins', sans-serif;
+}
 
-        /* Lenis Smooth Scroll Recommended CSS */
-        html.lenis { height: auto; }
-        .lenis.lenis-smooth { scroll-behavior: auto; }
-        .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
-        .lenis.lenis-stopped { overflow: hidden; }
-        .lenis.lenis-scrolling iframe { pointer-events: none; }
+/* Custom scrollbar for a darker theme */
+::-webkit-scrollbar {
+    width: 8px;
+}
 
-        /* ==========================================
+::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8894d;
+}
+
+/* Hide scrollbar for horizontal scrolling containers */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Skyline Base64 SVG Background for Footer */
+.skyline-bg {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 100' preserveAspectRatio='none'%3E%3Cpath fill='none' stroke='%23444' stroke-width='1.5' d='M0,100 v-20 h10 v-40 h20 v20 h10 v-30 h15 v40 h20 v-60 h25 v30 h10 v20 h20 v-50 h15 v-20 h20 v60 h15 v-30 h20 v50 h10 v-40 h25 v20 h15 v-50 h20 v40 h15 v-20 h20 v60 h10 v-30 h25 v40 h20 v-70 h20 v30 h15 v20 h15 v-40 h20 v50 h10 v-20 h15 v40 h20 v-60 h25 v80' /%3E%3Cpath fill='none' stroke='%23222' stroke-width='1' d='M0,100 v-30 h15 v-20 h15 v40 h20 v-50 h25 v30 h10 v-40 h20 v50 h15 v-30 h20 v20 h10 v-60 h25 v40 h15 v-20 h20 v60 h15 v-40 h20 v30 h10 v-50 h25 v60 h15 v-30 h20 v20 h15 v-40 h20 v70 h10 v-20 h15 v30' /%3E%3C/svg%3E");
+    background-size: 800px 100%;
+    background-repeat: repeat-x;
+    background-position: bottom;
+}
+
+/* Lenis Smooth Scroll Recommended CSS */
+html.lenis {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+    pointer-events: none;
+}
+
+/* ==========================================
            Sticky Nav Transformation Logic 
         ========================================== */
-        #nav-wrapper { background-color: transparent; border-bottom: 1px solid transparent; transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
-        #nav-container { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
-        #main-nav { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
-        
-        .nav-edge-left, .nav-edge-right {
-            display: flex;
-            flex: 0 0 0%;
-            opacity: 0;
-            overflow: hidden;
-            white-space: nowrap;
-            padding: 0 !important;
-            margin: 0 !important;
-            width: 0 !important;
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .nav-edge-left { justify-content: flex-start; }
-        .nav-edge-right { justify-content: flex-end; }
-        
-        #nav-wrapper.is-stuck {
-            background-color: #0a0a0a;
-            border-bottom: 1px solid rgba(168, 137, 77, 0.3);
-            pointer-events: none; 
-        }
-        #nav-wrapper.is-stuck #nav-container {
-            max-width: 100%;
-            padding: 0;
-            margin-top: 0; 
-            pointer-events: auto; 
-        }
-        #nav-wrapper.is-stuck #main-nav {
-            border-color: transparent;
-            background-color: #0a0a0a;
-            box-shadow: none;
-            padding-left: 2rem;
-            padding-right: 2rem;
-        }
-        
-        @media (min-width: 1024px) {
-            #nav-wrapper.is-stuck #main-nav { padding-left: 4rem; padding-right: 4rem; }
-            #nav-wrapper.is-stuck .nav-edge-left, 
-            #nav-wrapper.is-stuck .nav-edge-right {
-                flex: 1 1 0% !important;
-                opacity: 1 !important;
-                width: auto !important;
-            }
-        }
+#nav-wrapper {
+    background-color: transparent;
+    border-bottom: 1px solid transparent;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#nav-container {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#main-nav {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-edge-left,
+.nav-edge-right {
+    display: flex;
+    flex: 0 0 0%;
+    opacity: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 0 !important;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-edge-left {
+    justify-content: flex-start;
+}
+
+.nav-edge-right {
+    justify-content: flex-end;
+}
+
+#nav-wrapper.is-stuck {
+    background-color: #0a0a0a;
+    border-bottom: 1px solid rgba(168, 137, 77, 0.3);
+    pointer-events: none;
+}
+
+#nav-wrapper.is-stuck #nav-container {
+    max-width: 100%;
+    padding: 0;
+    margin-top: 0;
+    pointer-events: auto;
+}
+
+#nav-wrapper.is-stuck #main-nav {
+    border-color: transparent;
+    background-color: #0a0a0a;
+    box-shadow: none;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+@media (min-width: 1024px) {
+    #nav-wrapper.is-stuck #main-nav {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    #nav-wrapper.is-stuck .nav-edge-left,
+    #nav-wrapper.is-stuck .nav-edge-right {
+        flex: 1 1 0% !important;
+        opacity: 1 !important;
+        width: auto !important;
+    }
+}
