@@ -303,16 +303,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 7. Setup GSAP Scroll Reveals
     const elements = document.querySelectorAll('[data-gsap]');
+    
+    // Set initial state for all GSAP elements to avoid flash
     elements.forEach((el) => {
         const type = el.getAttribute('data-gsap');
         const delay = (parseFloat(el.getAttribute('data-delay')) || 0) / 1000;
         const duration = (parseFloat(el.getAttribute('data-duration')) || 1200) / 1000;
 
-        let startVars = { opacity: 0 };
-        let endVars = {
-            opacity: 1,
-            x: 0,
-            y: 0,
+        let fromVars = {
+            opacity: 0,
             duration: duration,
             delay: delay,
             ease: "power3.out",
@@ -324,14 +323,13 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         switch (type) {
-            case 'fade-up': startVars.y = 60; break;
-            case 'fade-down': startVars.y = -60; break;
-            case 'fade-left': startVars.x = 60; break;
-            case 'fade-right': startVars.x = -60; break;
+            case 'fade-up': fromVars.y = 60; break;
+            case 'fade-down': fromVars.y = -60; break;
+            case 'fade-left': fromVars.x = 60; break;
+            case 'fade-right': fromVars.x = -60; break;
         }
 
-        gsap.set(el, startVars);
-        gsap.to(el, endVars);
+        gsap.from(el, fromVars);
     });
 
 });
