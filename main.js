@@ -12,8 +12,11 @@ function openPlanTab(evt, tabId) {
     let tabBtns = document.getElementsByClassName("plan-tab-btn");
     let tabArrows = document.getElementsByClassName("plan-tab-arrow");
     for (let i = 0; i < tabBtns.length; i++) {
-        tabBtns[i].className = tabBtns[i].className.replace("bg-[#ebd373]", "bg-transparent").replace("text-[#111]", "text-gray-400").replace("border-transparent", "border-[#ebd373]/40");
-        if (!tabBtns[i].className.includes("hover:border-[#ebd373]")) tabBtns[i].className += " hover:border-[#ebd373] hover:text-white";
+        tabBtns[i].classList.remove("bg-[#ebd373]", "bg-gradient-to-r", "from-[#ebd373]", "to-yellow-600", "text-[#111]", "border-transparent", "font-semibold");
+        tabBtns[i].classList.add("bg-transparent", "text-gray-400", "border-[#ebd373]/40");
+        if (!tabBtns[i].className.includes("hover:border-[#ebd373]")) {
+            tabBtns[i].classList.add("hover:border-[#ebd373]", "hover:text-white");
+        }
         tabArrows[i].classList.add("hidden");
     }
 
@@ -26,7 +29,8 @@ function openPlanTab(evt, tabId) {
     }, 50);
 
     let clickedBtn = evt.currentTarget;
-    clickedBtn.className = clickedBtn.className.replace("hover:border-[#ebd373]", "").replace("hover:text-white", "").replace("bg-transparent", "bg-[#ebd373]").replace("text-gray-400", "text-[#111]").replace("border-[#ebd373]/40", "border-transparent");
+    clickedBtn.classList.remove("hover:border-[#ebd373]", "hover:text-white", "bg-transparent", "text-gray-400", "border-[#ebd373]/40");
+    clickedBtn.classList.add("bg-gradient-to-r", "from-[#ebd373]", "to-yellow-600", "text-[#111]", "border-transparent", "font-semibold");
     clickedBtn.querySelector('.plan-tab-arrow').classList.remove("hidden");
 }
 
@@ -43,8 +47,11 @@ function openAmenityTab(evt, tabId, titleName) {
     let tabBtns = document.getElementsByClassName("amenity-tab-btn");
     let tabArrows = document.getElementsByClassName("amenity-tab-arrow");
     for (let i = 0; i < tabBtns.length; i++) {
-        tabBtns[i].className = tabBtns[i].className.replace("bg-[#ebd373]", "bg-transparent").replace("text-[#111]", "text-gray-400");
-        if (!tabBtns[i].className.includes("hover:bg-gray-800/50")) tabBtns[i].className += " hover:bg-gray-800/50 hover:text-white";
+        tabBtns[i].classList.remove("bg-[#ebd373]", "bg-gradient-to-r", "from-[#ebd373]", "to-yellow-600", "text-[#111]");
+        tabBtns[i].classList.add("bg-transparent", "text-gray-400");
+        if (!tabBtns[i].className.includes("hover:bg-gray-800/50")) {
+            tabBtns[i].classList.add("hover:bg-gray-800/50", "hover:text-white");
+        }
         tabArrows[i].classList.add("hidden");
     }
 
@@ -57,7 +64,8 @@ function openAmenityTab(evt, tabId, titleName) {
     }, 50);
 
     let clickedBtn = evt.currentTarget;
-    clickedBtn.className = clickedBtn.className.replace("hover:bg-gray-800/50", "").replace("hover:text-white", "").replace("bg-transparent", "bg-[#ebd373]").replace("text-gray-400", "text-[#111]");
+    clickedBtn.classList.remove("hover:bg-gray-800/50", "hover:text-white", "bg-transparent", "text-gray-400");
+    clickedBtn.classList.add("bg-gradient-to-r", "from-[#ebd373]", "to-yellow-600", "text-[#111]");
     clickedBtn.querySelector('.amenity-tab-arrow').classList.remove("hidden");
 }
 
@@ -72,8 +80,11 @@ function openLocTab(evt, tabId) {
     let tabBtns = document.getElementsByClassName("loc-tab-btn");
     let tabArrows = document.getElementsByClassName("loc-tab-arrow");
     for (let i = 0; i < tabBtns.length; i++) {
-        tabBtns[i].className = tabBtns[i].className.replace("bg-[#ebd373]", "bg-transparent").replace("text-[#111]", "text-gray-400").replace("border-transparent", "border-[#ebd373]/40");
-        if (!tabBtns[i].className.includes("hover:border-[#ebd373]")) tabBtns[i].className += " hover:border-[#ebd373] hover:text-white";
+        tabBtns[i].classList.remove("bg-[#ebd373]", "bg-gradient-to-r", "from-[#ebd373]", "to-yellow-600", "text-[#111]", "border-transparent", "font-semibold");
+        tabBtns[i].classList.add("bg-transparent", "text-gray-400", "border-[#ebd373]/40");
+        if (!tabBtns[i].className.includes("hover:border-[#ebd373]")) {
+            tabBtns[i].classList.add("hover:border-[#ebd373]", "hover:text-white");
+        }
         tabArrows[i].classList.add("hidden");
     }
 
@@ -86,7 +97,8 @@ function openLocTab(evt, tabId) {
     }, 50);
 
     let clickedBtn = evt.currentTarget;
-    clickedBtn.className = clickedBtn.className.replace("hover:border-[#ebd373]", "").replace("hover:text-white", "").replace("bg-transparent", "bg-[#ebd373]").replace("text-gray-400", "text-[#111]").replace("border-[#ebd373]/40", "border-transparent");
+    clickedBtn.classList.remove("hover:border-[#ebd373]", "hover:text-white", "bg-transparent", "text-gray-400", "border-[#ebd373]/40");
+    clickedBtn.classList.add("bg-gradient-to-r", "from-[#ebd373]", "to-yellow-600", "text-[#111]", "border-transparent", "font-semibold");
     clickedBtn.querySelector('.loc-tab-arrow').classList.remove("hidden");
 }
 
