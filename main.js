@@ -441,8 +441,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 e.preventDefault();
                 alert(errors.join("\n"));
             } else {
-                // Here you would typically handle the form submission via fetch/AJAX
-                console.log("Form submitted successfully!");
+                e.preventDefault();
+                const fullName = document.getElementById('full-name').value;
+                const salutation = document.getElementById('salutation').value;
+                
+                // Redirect to thank-you page with parameters
+                window.location.href = `thank-you.html?salutation=${encodeURIComponent(salutation)}&name=${encodeURIComponent(fullName)}`;
             }
         });
 
