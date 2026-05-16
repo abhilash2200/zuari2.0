@@ -344,4 +344,117 @@ document.addEventListener('DOMContentLoaded', function () {
         gsap.from(el, fromVars);
     });
 
+    // 8. Form Handling Logic
+    const countryCodes = {
+        "India": "+91",
+        "United Arab Emirates": "+971",
+        "United States": "+1",
+        "United Kingdom": "+44",
+        "Singapore": "+65",
+        "Australia": "+61",
+        "Canada": "+1",
+        "Germany": "+49",
+        "France": "+33",
+        "Other": "+"
+    };
+
+    const callbackForm = document.getElementById('callback-form');
+    if (callbackForm) {
+        const countrySelect = document.getElementById('country');
+        const phoneInput = document.getElementById('phone');
+        const whatsappCheck = document.getElementById('whatsapp-check');
+        const whatsappNoField = document.getElementById('whatsapp-no-field');
+        const whatsappNoInput = document.getElementById('whatsapp-no');
+        const countryCodeDisplay = document.getElementById('country-code-display');
+        const waCountryCodeDisplay = document.getElementById('wa-country-code-display');
+        const sendOtpBtn = document.getElementById('send-otp-btn');
+
+        // Update country code display
+        countrySelect.addEventListener('change', function () {
+            const code = countryCodes[this.value] || "+";
+            countryCodeDisplay.innerText = code;
+            waCountryCodeDisplay.innerText = code;
+            
+            if (this.value !== "") {
+                this.classList.remove('text-gray-400');
+                this.classList.add('text-white');
+            }
+        });
+
+        // WhatsApp field toggle
+        whatsappCheck.addEventListener('change', function () {
+            if (this.checked) {
+                gsap.to(whatsappNoField, { 
+                    height: 0, 
+                    opacity: 0, 
+                    duration: 0.3, 
+                    onComplete: () => whatsappNoField.classList.add('hidden') 
+                });
+                whatsappNoInput.value = phoneInput.value;
+                whatsappNoInput.removeAttribute('required');
+            } else {
+                whatsappNoField.classList.remove('hidden');
+                gsap.fromTo(whatsappNoField, { height: 0, opacity: 0 }, { height: 'auto', opacity: 1, duration: 0.3 });
+                whatsappNoInput.setAttribute('required', 'required');
+            }
+        });
+
+        // Sync phone to WhatsApp if checked
+        phoneInput.addEventListener('input', function () {
+            if (whatsappCheck.checked) {
+                whatsappNoInput.value = this.value;
+            }
+        });
+
+        // OTP Simulation
+        sendOtpBtn.addEventListener('click', function () {
+            const phone = phoneInput.value;
+            if (phone.length === 10 && /^\d+$/.test(phone)) {
+                this.innerText = "OTP Sent!";
+                this.classList.add('bg-green-600/20', 'text-green-500');
+                setTimeout(() => {
+                    this.innerText = "Resend OTP";
+                    this.classList.remove('bg-green-600/20', 'text-green-500');
+                }, 5000);
+            } else {
+                alert('Please enter a valid 10-digit phone number first.');
+            }
+        });
+
+        // Form Validation & Submission
+        callbackForm.addEventListener('submit', function (e) {
+            const email = document.getElementById('email').value;
+            const phone = phoneInput.value;
+            const whatsappNo = whatsappNoInput.value;
+            const salutation = document.getElementById('salutation').value;
+            const preferredTime = document.getElementById('preferred-time').value;
+
+            let errors = [];
+
+            if (!salutation) errors.push("Please select a salutation.");
+            if (!/^\S+@\S+\.\S+$/.test(email)) errors.push("Please enter a valid email address.");
+            if (phone.length !== 10) errors.push("Phone number must be exactly 10 digits.");
+            if (!whatsappCheck.checked && whatsappNo.length !== 10) errors.push("WhatsApp number must be exactly 10 digits.");
+            if (!preferredTime) errors.push("Please select a preferred time to call.");
+
+            if (errors.length > 0) {
+                e.preventDefault();
+                alert(errors.join("\n"));
+            } else {
+                // Here you would typically handle the form submission via fetch/AJAX
+                console.log("Form submitted successfully!");
+            }
+        });
+
+        // Change select text color when an option is selected
+        document.querySelectorAll('select').forEach(select => {
+            select.addEventListener('change', function() {
+                if (this.value) {
+                    this.classList.remove('text-gray-400');
+                    this.classList.add('text-white');
+                }
+            });
+        });
+    }
+
 });

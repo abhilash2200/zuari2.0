@@ -138,3 +138,50 @@ html.lenis {
         width: auto !important;
     }
 }
+
+/* ==========================================
+            Custom Form Styling 
+   ========================================== */
+select.custom-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23eab308'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.2rem;
+    padding-right: 2.5rem;
+    cursor: pointer;
+}
+
+select.custom-select option {
+    background-color: #111;
+    color: #fff;
+    padding: 10px;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
+#whatsapp-no-field {
+    transition: all 0.3s ease;
+}
+
+input::placeholder {
+    color: rgba(156, 163, 175, 0.7);
+}
+
+#country-code-display, #wa-country-code-display {
+    user-select: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

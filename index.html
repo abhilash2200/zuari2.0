@@ -53,7 +53,7 @@
 
                 <p class="text-yellow-500 uppercase tracking-[0.2em] text-sm mb-2 font-semibold" data-gsap="fade-right"
                     data-delay="1000">Unveiling Exclusivity</p>
-                <h1 class="text-5xl md:text-6xl lg:text-7xl font-serif leading-tight mb-4 text-white"
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-serif leading-1.2 mb-4 text-white"
                     data-gsap="fade-right" data-delay="1200">
                     BEAT THE <br> MARKET
                 </h1>
@@ -82,32 +82,105 @@
                             NO</span><br>PRM/KA/RERA/1250/303/PR/300925/008132 (Karnataka)</p>
                 </div>
 
-                <form action="#">
+                <form id="callback-form" action="#" class="mt-4">
                     <div class="space-y-4">
-                        <input type="text" placeholder="Full Name"
-                            class="w-full bg-transparent border border-gray-600 p-3 text-sm focus:border-yellow-500 focus:outline-none transition-colors">
-                        <input type="email" placeholder="Email Address"
-                            class="w-full bg-transparent border border-gray-600 p-3 text-sm focus:border-yellow-500 focus:outline-none transition-colors">
+                        <!-- Salutation & Full Name -->
+                        <div class="flex gap-2">
+                            <select id="salutation" name="salutation" required
+                                class="w-1/3 bg-transparent border border-gray-600 p-3 text-sm focus:border-yellow-500 focus:outline-none transition-colors text-gray-400 custom-select">
+                                <option value="" disabled selected>Salutation</option>
+                                <option value="Mr.">Mr.</option>
+                                <option value="Mrs.">Mrs.</option>
+                                <option value="Ms.">Ms.</option>
+                                <option value="Dr.">Dr.</option>
+                            </select>
+                            <input type="text" id="full-name" name="full-name" placeholder="Full Name" required
+                                class="w-2/3 bg-transparent border border-gray-600 p-3 text-sm focus:border-yellow-500 focus:outline-none transition-colors text-white">
+                        </div>
 
-                        <label class="flex items-start gap-2 text-[10px] text-gray-400 cursor-pointer">
-                            <input type="checkbox" class="mt-0.5 accent-yellow-500">
-                            Yes, I want to stay informed and receive newsletter and marketing updates.
-                        </label>
+                        <!-- Email -->
+                        <input type="email" id="email" name="email" placeholder="Email Address" required
+                            class="w-full bg-transparent border border-gray-600 p-3 text-sm focus:border-yellow-500 focus:outline-none transition-colors text-white">
 
-                        <input type="tel" placeholder="Phone Number"
-                            class="w-full bg-transparent border border-gray-600 p-3 text-sm focus:border-yellow-500 focus:outline-none transition-colors">
+                        <!-- Country Selection -->
+                        <select id="country" name="country" required
+                            class="w-full bg-transparent border border-gray-600 p-3 text-sm focus:border-yellow-500 focus:outline-none transition-colors text-gray-400 custom-select">
+                            <option value="India" selected>India</option>
+                            <option value="United Arab Emirates">United Arab Emirates</option>
+                            <option value="United States">United States</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="Singapore">Singapore</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Germany">Germany</option>
+                            <option value="France">France</option>
+                            <option value="Other">Other</option>
+                        </select>
 
-                        <label class="flex items-start gap-2 text-[10px] text-gray-400 cursor-pointer">
-                            <input type="checkbox" checked class="mt-0.5 accent-yellow-500">
-                            Do you have whatsapp activated on this number?
-                        </label>
+                        <!-- Phone Number with Country Code -->
+                        <div class="space-y-2">
+                            <div class="flex gap-2">
+                                <div id="country-code-display" class="bg-gray-800/50 border border-gray-600 p-3 text-sm text-gray-400 min-w-[50px] flex items-center justify-center">+91</div>
+                                <input type="tel" id="phone" name="phone" placeholder="Phone Number" required pattern="[0-9]{10}" maxlength="10"
+                                    class="flex-grow bg-transparent border border-gray-600 p-3 text-sm focus:border-yellow-500 focus:outline-none transition-colors text-white">
+                            </div>
+                            <div id="otp-container" class="flex gap-2">
+                                <input type="text" id="otp" name="otp" placeholder="Enter OTP" 
+                                    class="flex-grow bg-transparent border border-gray-600 p-3 text-sm focus:border-yellow-500 focus:outline-none transition-colors text-white">
+                                <button type="button" id="send-otp-btn" class="bg-yellow-600/20 hover:bg-yellow-600/40 text-yellow-500 text-[10px] uppercase tracking-wider px-4 py-2 border border-yellow-600/30 transition-all">Send OTP</button>
+                            </div>
+                            <p id="phone-error" class="text-[10px] text-red-500 hidden">Please enter a valid 10-digit number</p>
+                        </div>
 
-                        <textarea placeholder="Your Message" rows="2"
-                            class="w-full bg-transparent border border-gray-600 p-3 text-sm focus:border-yellow-500 focus:outline-none transition-colors resize-none"></textarea>
+                        <!-- WhatsApp Toggle -->
+                        <div class="space-y-3">
+                            <label class="flex items-center gap-2 text-[11px] text-gray-400 cursor-pointer group">
+                                <input type="checkbox" id="whatsapp-check" checked class="w-3.5 h-3.5 accent-yellow-500 rounded border-gray-600 bg-transparent">
+                                <span class="group-hover:text-gray-300 transition-colors">Do you have WhatsApp activated on this number?</span>
+                            </label>
+                            <div id="whatsapp-no-field" class="hidden space-y-2">
+                                <div class="flex gap-2">
+                                    <div id="wa-country-code-display" class="bg-gray-800/50 border border-gray-600 p-3 text-sm text-gray-400 min-w-[50px] flex items-center justify-center">+91</div>
+                                    <input type="tel" id="whatsapp-no" name="whatsapp-no" placeholder="WhatsApp Number" maxlength="10"
+                                        class="flex-grow bg-transparent border border-gray-600 p-3 text-sm focus:border-yellow-500 focus:outline-none transition-colors text-white">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Preferred Time to Call -->
+                        <select id="preferred-time" name="preferred-time" required
+                            class="w-full bg-transparent border border-gray-600 p-3 text-sm focus:border-yellow-500 focus:outline-none transition-colors text-gray-400 custom-select">
+                            <option value="" disabled selected>Preferred time to call</option>
+                            <option value="09:00">09:00</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="12:00">12:00</option>
+                            <option value="13:00">13:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="16:00">16:00</option>
+                            <option value="17:00">17:00</option>
+                            <option value="18:00">18:00</option>
+                            <option value="19:00">19:00</option>
+                            <option value="20:00">20:00</option>
+                            <option value="21:00">21:00</option>
+                        </select>
+
+                        <!-- Consent Checkboxes -->
+                        <div class="space-y-3 pt-2">
+                            <label class="flex items-start gap-2 text-[10px] text-gray-400 cursor-pointer group leading-normal">
+                                <input type="checkbox" id="consent-1" required class="mt-0.5 w-3.5 h-3.5 accent-yellow-500 rounded border-gray-600 bg-transparent flex-shrink-0">
+                                <span class="group-hover:text-gray-300 transition-colors">I agree to receive communications about Zuari KinetiX and accept the terms and conditions. I understand that by submitting this form, I may be contacted via phone, SMS, email, or WhatsApp for project updates and promotional offers, and other relevant information. Your contact information will be kept confidential.</span>
+                            </label>
+                            <label class="flex items-start gap-2 text-[10px] text-gray-400 cursor-pointer group leading-normal">
+                                <input type="checkbox" id="consent-2" required class="mt-0.5 w-3.5 h-3.5 accent-yellow-500 rounded border-gray-600 bg-transparent flex-shrink-0">
+                                <span class="group-hover:text-gray-300 transition-colors">I hereby give my consent to the collection and use of my personal data in accordance with the <a href="https://zuari.in/privacy-policy" target="_blank" class="text-yellow-500 hover:underline">Privacy Policy</a></span>
+                            </label>
+                        </div>
                     </div>
                     <button type="submit"
-                        class="w-full bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-3 text-sm uppercase tracking-wider transition-colors mt-6">
-                        Submit
+                        class="w-full bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-400 hover:to-yellow-500 text-black font-bold py-3 text-sm uppercase tracking-widest transition-all mt-6 shadow-lg shadow-yellow-600/20 active:scale-95">
+                        Submit Request
                     </button>
                 </form>
             </div>
