@@ -69,6 +69,30 @@ function openAmenityTab(evt, tabId, titleName) {
     clickedBtn.querySelector('.amenity-tab-arrow').classList.remove("hidden");
 }
 
+function handleMobileAmenityChange(evt) {
+    let select = evt.target;
+    let selectedOption = select.options[select.selectedIndex];
+    let tabId = selectedOption.value;
+    let titleName = selectedOption.getAttribute('data-title');
+    
+    document.getElementById("amenity-title-display").innerText = titleName;
+
+    let tabContents = document.getElementsByClassName("amenity-tab-content");
+    for (let i = 0; i < tabContents.length; i++) {
+        tabContents[i].style.display = "none";
+        tabContents[i].classList.remove("opacity-100");
+        tabContents[i].classList.add("opacity-0");
+    }
+
+    let activeTabContent = document.getElementById(tabId);
+    activeTabContent.style.display = "block";
+    setTimeout(() => {
+        activeTabContent.classList.remove("opacity-0");
+        activeTabContent.classList.add("opacity-100");
+        if(typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
+    }, 50);
+}
+
 function openLocTab(evt, tabId) {
     let tabContents = document.getElementsByClassName("loc-tab-content");
     for (let i = 0; i < tabContents.length; i++) {
@@ -100,6 +124,48 @@ function openLocTab(evt, tabId) {
     clickedBtn.classList.remove("hover:border-[#ebd373]", "hover:text-white", "bg-transparent", "text-gray-400", "border-[#ebd373]/40");
     clickedBtn.classList.add("bg-gradient-to-r", "from-[#ebd373]", "to-yellow-600", "text-[#111]", "border-transparent", "font-semibold");
     clickedBtn.querySelector('.loc-tab-arrow').classList.remove("hidden");
+}
+
+function handleMobileLocChange(evt) {
+    let select = evt.target;
+    let selectedOption = select.options[select.selectedIndex];
+    let tabId = selectedOption.value;
+
+    let tabContents = document.getElementsByClassName("loc-tab-content");
+    for (let i = 0; i < tabContents.length; i++) {
+        tabContents[i].style.display = "none";
+        tabContents[i].classList.remove("opacity-100");
+        tabContents[i].classList.add("opacity-0");
+    }
+
+    let activeTabContent = document.getElementById(tabId);
+    activeTabContent.style.display = "block";
+    setTimeout(() => {
+        activeTabContent.classList.remove("opacity-0");
+        activeTabContent.classList.add("opacity-100");
+        if(typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
+    }, 50);
+}
+
+function handleMobileGalChange(evt) {
+    let select = evt.target;
+    let selectedOption = select.options[select.selectedIndex];
+    let tabId = selectedOption.value;
+
+    let tabContents = document.getElementsByClassName("gal-tab-content");
+    for (let i = 0; i < tabContents.length; i++) {
+        tabContents[i].style.display = "none";
+        tabContents[i].classList.remove("opacity-100");
+        tabContents[i].classList.add("opacity-0");
+    }
+
+    let activeTabContent = document.getElementById(tabId);
+    activeTabContent.style.display = "block";
+    setTimeout(() => {
+        activeTabContent.classList.remove("opacity-0");
+        activeTabContent.classList.add("opacity-100");
+        if(typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
+    }, 50);
 }
 
 function openGalTab(evt, tabId) {
@@ -145,6 +211,7 @@ document.addEventListener('DOMContentLoaded', function () {
         smoothTouch: false,
         touchMultiplier: 2,
     });
+    window.lenis = lenis;
 
     function raf(time) {
         lenis.raf(time);
@@ -461,4 +528,100 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+});
+
+// --- Sticky Mobile Header Background ---
+    const mainHeader = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50 && window.innerWidth < 768) {
+            mainHeader.classList.add('bg-[#111111]/95', 'backdrop-blur-md', 'shadow-md');
+            mainHeader.classList.remove('bg-transparent');
+        } else {
+            mainHeader.classList.remove('bg-[#111111]/95', 'backdrop-blur-md', 'shadow-md');
+            mainHeader.classList.add('bg-transparent');
+        }
+    });
+    window.addEventListener('resize', () => {
+        window.dispatchEvent(new Event('scroll'));
+    });
+
+    // --- Mobile Sidebar Drawer Logic ---
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const closeSidebarBtn = document.getElementById('close-sidebar-btn');
+    const mobileSidebar = document.getElementById('mobile-sidebar');
+    const sidebarOverlay = document.getElementById('sidebar-overlay');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    function openSidebar() {
+        mobileSidebar.classList.remove('translate-x-full');
+        sidebarOverlay.classList.remove('hidden');
+        
+        // Slight delay to allow display:block to apply before animating opacity
+        requestAnimationFrame(() => {
+            sidebarOverlay.classList.remove('opacity-0');
+            sidebarOverlay.classList.add('opacity-100');
+        });
+        
+        if (typeof lenis !== 'undefined') lenis.stop(); // Stop scroll when menu is open
+    }
+
+    function closeSidebar() {
+        mobileSidebar.classList.add('translate-x-full');
+        sidebarOverlay.classList.remove('opacity-100');
+        sidebarOverlay.classList.add('opacity-0');
+        
+        setTimeout(() => {
+            sidebarOverlay.classList.add('hidden');
+        }, 300);
+        
+        if (typeof lenis !== 'undefined') lenis.start(); // Resume scroll
+    }
+
+    if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openSidebar);
+    if (closeSidebarBtn) closeSidebarBtn.addEventListener('click', closeSidebar);
+    if (sidebarOverlay) sidebarOverlay.addEventListener('click', closeSidebar);
+
+    // Auto-close sidebar when a navigation link is clicked
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', closeSidebar);
+    });
+
+// --- Popup Form Logic ---
+const enquireModal = document.getElementById('enquire-modal');
+const closePopupBtn = document.getElementById('close-popup-btn');
+const openPopupBtns = document.querySelectorAll('.open-popup-btn');
+
+function openPopup(e) {
+    if(e) e.preventDefault();
+    enquireModal.classList.remove('hidden');
+    enquireModal.classList.add('flex');
+    requestAnimationFrame(() => {
+        enquireModal.classList.remove('opacity-0');
+        enquireModal.classList.add('opacity-100');
+    });
+    if (window.lenis) window.lenis.stop();
+}
+
+function closePopup() {
+    enquireModal.classList.remove('opacity-100');
+    enquireModal.classList.add('opacity-0');
+    setTimeout(() => {
+        enquireModal.classList.add('hidden');
+        enquireModal.classList.remove('flex');
+    }, 300);
+    if (window.lenis) window.lenis.start();
+}
+
+openPopupBtns.forEach(btn => {
+    btn.addEventListener('click', openPopup);
+});
+
+if (closePopupBtn) {
+    closePopupBtn.addEventListener('click', closePopup);
+}
+
+enquireModal.addEventListener('click', (e) => {
+    if (e.target === enquireModal) {
+        closePopup();
+    }
 });
