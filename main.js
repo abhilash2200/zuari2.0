@@ -74,7 +74,7 @@ function handleMobileAmenityChange(evt) {
     let selectedOption = select.options[select.selectedIndex];
     let tabId = selectedOption.value;
     let titleName = selectedOption.getAttribute('data-title');
-    
+
     document.getElementById("amenity-title-display").innerText = titleName;
 
     let tabContents = document.getElementsByClassName("amenity-tab-content");
@@ -89,7 +89,7 @@ function handleMobileAmenityChange(evt) {
     setTimeout(() => {
         activeTabContent.classList.remove("opacity-0");
         activeTabContent.classList.add("opacity-100");
-        if(typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
+        if (typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
     }, 50);
 }
 
@@ -143,7 +143,7 @@ function handleMobileLocChange(evt) {
     setTimeout(() => {
         activeTabContent.classList.remove("opacity-0");
         activeTabContent.classList.add("opacity-100");
-        if(typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
+        if (typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
     }, 50);
 }
 
@@ -164,7 +164,7 @@ function handleMobileGalChange(evt) {
     setTimeout(() => {
         activeTabContent.classList.remove("opacity-0");
         activeTabContent.classList.add("opacity-100");
-        if(typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
+        if (typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
     }, 50);
 }
 
@@ -382,7 +382,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 7. Setup GSAP Scroll Reveals
     const elements = document.querySelectorAll('[data-gsap]');
-    
+
     // Set initial state for all GSAP elements to avoid flash
     elements.forEach((el) => {
         const type = el.getAttribute('data-gsap');
@@ -441,7 +441,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const code = countryCodes[this.value] || "+";
             countryCodeDisplay.innerText = code;
             waCountryCodeDisplay.innerText = code;
-            
+
             if (this.value !== "") {
                 this.classList.remove('text-gray-400');
                 this.classList.add('text-white');
@@ -451,11 +451,11 @@ document.addEventListener('DOMContentLoaded', function () {
         // WhatsApp field toggle
         whatsappCheck.addEventListener('change', function () {
             if (this.checked) {
-                gsap.to(whatsappNoField, { 
-                    height: 0, 
-                    opacity: 0, 
-                    duration: 0.3, 
-                    onComplete: () => whatsappNoField.classList.add('hidden') 
+                gsap.to(whatsappNoField, {
+                    height: 0,
+                    opacity: 0,
+                    duration: 0.3,
+                    onComplete: () => whatsappNoField.classList.add('hidden')
                 });
                 whatsappNoInput.value = phoneInput.value;
                 whatsappNoInput.removeAttribute('required');
@@ -511,7 +511,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 e.preventDefault();
                 const fullName = document.getElementById('full-name').value;
                 const salutation = document.getElementById('salutation').value;
-                
+
                 // Redirect to thank-you page with parameters
                 window.location.href = `thank-you.html?salutation=${encodeURIComponent(salutation)}&name=${encodeURIComponent(fullName)}`;
             }
@@ -519,7 +519,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Change select text color when an option is selected
         document.querySelectorAll('select').forEach(select => {
-            select.addEventListener('change', function() {
+            select.addEventListener('change', function () {
                 if (this.value) {
                     this.classList.remove('text-gray-400');
                     this.classList.add('text-white');
@@ -531,60 +531,60 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // --- Sticky Mobile Header Background ---
-    const mainHeader = document.getElementById('main-header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50 && window.innerWidth < 768) {
-            mainHeader.classList.add('bg-[#111111]/95', 'backdrop-blur-md', 'shadow-md');
-            mainHeader.classList.remove('bg-transparent');
-        } else {
-            mainHeader.classList.remove('bg-[#111111]/95', 'backdrop-blur-md', 'shadow-md');
-            mainHeader.classList.add('bg-transparent');
-        }
-    });
-    window.addEventListener('resize', () => {
-        window.dispatchEvent(new Event('scroll'));
-    });
-
-    // --- Mobile Sidebar Drawer Logic ---
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const closeSidebarBtn = document.getElementById('close-sidebar-btn');
-    const mobileSidebar = document.getElementById('mobile-sidebar');
-    const sidebarOverlay = document.getElementById('sidebar-overlay');
-    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-
-    function openSidebar() {
-        mobileSidebar.classList.remove('translate-x-full');
-        sidebarOverlay.classList.remove('hidden');
-        
-        // Slight delay to allow display:block to apply before animating opacity
-        requestAnimationFrame(() => {
-            sidebarOverlay.classList.remove('opacity-0');
-            sidebarOverlay.classList.add('opacity-100');
-        });
-        
-        if (typeof lenis !== 'undefined') lenis.stop(); // Stop scroll when menu is open
+const mainHeader = document.getElementById('main-header');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50 && window.innerWidth < 768) {
+        mainHeader.classList.add('bg-[#111111]/95', 'backdrop-blur-md', 'shadow-md');
+        mainHeader.classList.remove('bg-transparent');
+    } else {
+        mainHeader.classList.remove('bg-[#111111]/95', 'backdrop-blur-md', 'shadow-md');
+        mainHeader.classList.add('bg-transparent');
     }
+});
+window.addEventListener('resize', () => {
+    window.dispatchEvent(new Event('scroll'));
+});
 
-    function closeSidebar() {
-        mobileSidebar.classList.add('translate-x-full');
-        sidebarOverlay.classList.remove('opacity-100');
-        sidebarOverlay.classList.add('opacity-0');
-        
-        setTimeout(() => {
-            sidebarOverlay.classList.add('hidden');
-        }, 300);
-        
-        if (typeof lenis !== 'undefined') lenis.start(); // Resume scroll
-    }
+// --- Mobile Sidebar Drawer Logic ---
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const closeSidebarBtn = document.getElementById('close-sidebar-btn');
+const mobileSidebar = document.getElementById('mobile-sidebar');
+const sidebarOverlay = document.getElementById('sidebar-overlay');
+const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
-    if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openSidebar);
-    if (closeSidebarBtn) closeSidebarBtn.addEventListener('click', closeSidebar);
-    if (sidebarOverlay) sidebarOverlay.addEventListener('click', closeSidebar);
+function openSidebar() {
+    mobileSidebar.classList.remove('translate-x-full');
+    sidebarOverlay.classList.remove('hidden');
 
-    // Auto-close sidebar when a navigation link is clicked
-    mobileNavLinks.forEach(link => {
-        link.addEventListener('click', closeSidebar);
+    // Slight delay to allow display:block to apply before animating opacity
+    requestAnimationFrame(() => {
+        sidebarOverlay.classList.remove('opacity-0');
+        sidebarOverlay.classList.add('opacity-100');
     });
+
+    if (typeof lenis !== 'undefined') lenis.stop(); // Stop scroll when menu is open
+}
+
+function closeSidebar() {
+    mobileSidebar.classList.add('translate-x-full');
+    sidebarOverlay.classList.remove('opacity-100');
+    sidebarOverlay.classList.add('opacity-0');
+
+    setTimeout(() => {
+        sidebarOverlay.classList.add('hidden');
+    }, 300);
+
+    if (typeof lenis !== 'undefined') lenis.start(); // Resume scroll
+}
+
+if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openSidebar);
+if (closeSidebarBtn) closeSidebarBtn.addEventListener('click', closeSidebar);
+if (sidebarOverlay) sidebarOverlay.addEventListener('click', closeSidebar);
+
+// Auto-close sidebar when a navigation link is clicked
+mobileNavLinks.forEach(link => {
+    link.addEventListener('click', closeSidebar);
+});
 
 // --- Popup Form Logic ---
 const enquireModal = document.getElementById('enquire-modal');
@@ -592,7 +592,7 @@ const closePopupBtn = document.getElementById('close-popup-btn');
 const openPopupBtns = document.querySelectorAll('.open-popup-btn');
 
 function openPopup(e) {
-    if(e) e.preventDefault();
+    if (e) e.preventDefault();
     enquireModal.classList.remove('hidden');
     enquireModal.classList.add('flex');
     requestAnimationFrame(() => {
@@ -623,5 +623,41 @@ if (closePopupBtn) {
 enquireModal.addEventListener('click', (e) => {
     if (e.target === enquireModal) {
         closePopup();
+    }
+});
+
+// --- Google Maps iframe Lazy Loading ---
+document.addEventListener('DOMContentLoaded', function () {
+    const lazyMaps = document.querySelectorAll('.lazy-map');
+
+    if ('IntersectionObserver' in window) {
+        const mapObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const iframe = entry.target;
+                    const src = iframe.getAttribute('data-src');
+                    if (src) {
+                        iframe.setAttribute('src', src);
+                        iframe.removeAttribute('data-src');
+                    }
+                    observer.unobserve(iframe); // Cleanup observer after load
+                }
+            });
+        }, {
+            rootMargin: '300px' // Preload slightly before visibility
+        });
+
+        lazyMaps.forEach(map => {
+            mapObserver.observe(map);
+        });
+    } else {
+        // Fallback for older browsers
+        lazyMaps.forEach(map => {
+            const src = map.getAttribute('data-src');
+            if (src) {
+                map.setAttribute('src', src);
+                map.removeAttribute('data-src');
+            }
+        });
     }
 });
