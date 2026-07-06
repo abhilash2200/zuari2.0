@@ -1,88 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
-/* Custom font import */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+#main-nav,
+#nav-container,
+#nav-wrapper,
+.nav-edge-left,
+.nav-edge-right {
+    transition: .5s cubic-bezier(.4, 0, .2, 1)
+}
+
+.gold-draw-btn,
+input[type=checkbox] {
+    cursor: pointer
+}
 
 .font-serif {
-    font-family: 'Noto Serif', serif;
+    font-family: 'Noto Serif', serif
 }
 
-.font-sans {
-    font-family: 'Poppins', sans-serif;
+.font-sans,
+.gold-draw-btn {
+    font-family: Inter, sans-serif
 }
 
-/* Custom scrollbar for a darker theme */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 8px
 }
 
 ::-webkit-scrollbar-track {
-    background: #0a0a0a;
+    background: #0a0a0a
 }
 
 ::-webkit-scrollbar-thumb {
     background: #333;
-    border-radius: 4px;
+    border-radius: 4px
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #a8894d;
+    background: #a8894d
 }
 
-/* Hide scrollbar for horizontal scrolling containers */
 .no-scrollbar::-webkit-scrollbar {
-    display: none;
+    display: none
 }
 
 .no-scrollbar {
     -ms-overflow-style: none;
-    scrollbar-width: none;
+    scrollbar-width: none
 }
 
-/* Skyline Base64 SVG Background for Footer */
+.gold-draw-btn,
+.lenis.lenis-stopped {
+    overflow: hidden
+}
+
 .skyline-bg {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 100' preserveAspectRatio='none'%3E%3Cpath fill='none' stroke='%23444' stroke-width='1.5' d='M0,100 v-20 h10 v-40 h20 v20 h10 v-30 h15 v40 h20 v-60 h25 v30 h10 v20 h20 v-50 h15 v-20 h20 v60 h15 v-30 h20 v50 h10 v-40 h25 v20 h15 v-50 h20 v40 h15 v-20 h20 v60 h10 v-30 h25 v40 h20 v-70 h20 v30 h15 v20 h15 v-40 h20 v50 h10 v-20 h15 v40 h20 v-60 h25 v80' /%3E%3Cpath fill='none' stroke='%23222' stroke-width='1' d='M0,100 v-30 h15 v-20 h15 v40 h20 v-50 h25 v30 h10 v-40 h20 v50 h15 v-30 h20 v20 h10 v-60 h25 v40 h15 v-20 h20 v60 h15 v-40 h20 v30 h10 v-50 h25 v60 h15 v-30 h20 v20 h15 v-40 h20 v70 h10 v-20 h15 v30' /%3E%3C/svg%3E");
     background-size: 800px 100%;
     background-repeat: repeat-x;
-    background-position: bottom;
+    background-position: bottom
 }
 
-/* Lenis Smooth Scroll Recommended CSS */
 html.lenis {
-    height: auto;
+    height: auto
 }
 
 .lenis.lenis-smooth {
-    scroll-behavior: auto;
+    scroll-behavior: auto
 }
 
 .lenis.lenis-smooth [data-lenis-prevent] {
-    overscroll-behavior: contain;
-}
-
-.lenis.lenis-stopped {
-    overflow: hidden;
+    overscroll-behavior: contain
 }
 
 .lenis.lenis-scrolling iframe {
-    pointer-events: none;
+    pointer-events: none
 }
 
-/* ==========================================
-           Sticky Nav Transformation Logic 
-        ========================================== */
 #nav-wrapper {
     background-color: transparent;
-    border-bottom: 1px solid transparent;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-#nav-container {
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-#main-nav {
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border-bottom: 1px solid transparent
 }
 
 .nav-edge-left,
@@ -94,29 +91,28 @@ html.lenis {
     white-space: nowrap;
     padding: 0 !important;
     margin: 0 !important;
-    width: 0 !important;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 0 !important
 }
 
 .nav-edge-left {
-    justify-content: flex-start;
+    justify-content: flex-start
 }
 
 .nav-edge-right {
-    justify-content: flex-end;
+    justify-content: flex-end
 }
 
 #nav-wrapper.is-stuck {
     background-color: #0a0a0a;
-    border-bottom: 1px solid rgba(168, 137, 77, 0.3);
-    pointer-events: none;
+    border-bottom: 1px solid rgba(168, 137, 77, .3);
+    pointer-events: none
 }
 
 #nav-wrapper.is-stuck #nav-container {
     max-width: 100%;
     padding: 0;
     margin-top: 0;
-    pointer-events: auto;
+    pointer-events: auto
 }
 
 #nav-wrapper.is-stuck #main-nav {
@@ -124,26 +120,39 @@ html.lenis {
     background-color: #0a0a0a;
     box-shadow: none;
     padding-left: 2rem;
-    padding-right: 2rem;
+    padding-right: 2rem
 }
 
-@media (min-width: 1024px) {
+#nav-wrapper.is-stuck .nav-link {
+    padding: .25rem .75rem !important;
+    font-size: 14px !important;
+    border-color: rgba(255, 255, 255, .15) !important
+}
+
+#nav-wrapper.is-stuck .nav-link:hover {
+    border-color: rgba(235, 211, 115, .6) !important
+}
+
+#nav-wrapper.is-stuck .nav-edge-right a {
+    padding: .25rem .75rem !important;
+    font-size: 10px !important;
+    border-color: rgba(235, 211, 115, .15) !important
+}
+
+@media (min-width:1024px) {
     #nav-wrapper.is-stuck #main-nav {
         padding-left: 4rem;
-        padding-right: 4rem;
+        padding-right: 4rem
     }
 
     #nav-wrapper.is-stuck .nav-edge-left,
     #nav-wrapper.is-stuck .nav-edge-right {
         flex: 1 1 0% !important;
         opacity: 1 !important;
-        width: auto !important;
+        width: auto !important
     }
 }
 
-/* ==========================================
-            Custom Form Styling 
-   ========================================== */
 select.custom-select {
     appearance: none;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23eab308'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
@@ -151,67 +160,56 @@ select.custom-select {
     background-position: right 1rem center;
     background-size: 1.2rem;
     padding-right: 2.5rem;
-    cursor: pointer;
+    cursor: pointer
 }
 
 select.custom-select option {
     background-color: #111;
     color: #fff;
-    padding: 10px;
-}
-
-input[type="checkbox"] {
-    cursor: pointer;
+    padding: 10px
 }
 
 #whatsapp-no-field {
-    transition: all 0.3s ease;
+    transition: .3s
 }
 
 input::placeholder {
-    color: rgba(156, 163, 175, 0.7);
+    color: rgba(156, 163, 175, .7)
 }
 
-#country-code-display, #wa-country-code-display {
-    user-select: none;
+#country-code-display,
+#wa-country-code-display {
+    user-select: none
 }
 
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0
 }
 
-/* Firefox */
 input[type=number] {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield
 }
 
-/* ==========================================
-      Premium Gold Border-Drawing Button 
-========================================== */
 .gold-draw-btn {
     position: relative;
-    cursor: pointer;
     text-align: center;
-    font-family: 'Poppins', sans-serif;
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
-    color: #ffffff;
+    color: #fff;
     border-radius: 2px;
-    transition: all 0.3s ease-in-out;
+    transition: .3s ease-in-out;
     outline-offset: 4px;
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, .6);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    letter-spacing: 0.1em;
+    letter-spacing: .1em
 }
 
 .gold-draw-btn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, .8)
 }
 
 .gold-draw-btn .shimmer {
@@ -220,24 +218,23 @@ input[type=number] {
     top: 0;
     height: 100%;
     width: 50%;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, .15);
     transform: rotate(12deg);
     z-index: 10;
     filter: blur(8px);
-    transition: all 1s ease-in-out;
+    transition: 1s ease-in-out
 }
 
 .gold-draw-btn:hover .shimmer {
-    left: 125%;
+    left: 125%
 }
 
 .gold-draw-btn .border-segment {
     position: absolute;
     border-color: #ebd373;
-    transition: all 0.3s ease-in-out;
+    transition: .3s ease-in-out
 }
 
-/* top-left */
 .gold-draw-btn .border-tl {
     width: 50%;
     height: 20%;
@@ -245,10 +242,9 @@ input[type=number] {
     border-left: 2px solid #ebd373;
     border-top: 2px solid #ebd373;
     top: 0;
-    left: 0;
+    left: 0
 }
 
-/* top-right */
 .gold-draw-btn .border-tr {
     width: 50%;
     height: 60%;
@@ -256,14 +252,14 @@ input[type=number] {
     border-right: 2px solid #ebd373;
     border-top: 2px solid #ebd373;
     top: 0;
-    right: 0;
+    right: 0
 }
 
+.gold-draw-btn:hover .border-bl,
 .gold-draw-btn:hover .border-tr {
-    height: 90%;
+    height: 90%
 }
 
-/* bottom-left */
 .gold-draw-btn .border-bl {
     width: 50%;
     height: 60%;
@@ -271,14 +267,9 @@ input[type=number] {
     border-left: 2px solid #ebd373;
     border-bottom: 2px solid #ebd373;
     bottom: 0;
-    left: 0;
+    left: 0
 }
 
-.gold-draw-btn:hover .border-bl {
-    height: 90%;
-}
-
-/* bottom-right */
 .gold-draw-btn .border-br {
     width: 50%;
     height: 20%;
@@ -286,5 +277,5 @@ input[type=number] {
     border-right: 2px solid #ebd373;
     border-bottom: 2px solid #ebd373;
     bottom: 0;
-    right: 0;
+    right: 0
 }

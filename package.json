@@ -4,6 +4,8 @@
     "tailwindcss": "^4.3.0"
   },
   "scripts": {
-    "build-css": "npx @tailwindcss/cli -i ./style.css -o ./src/output.css --minify"
+    "build-css": "npx @tailwindcss/cli -i ./style.css -o ./src/output.css --minify",
+    "dev": "npx concurrently \"npx @tailwindcss/cli -i ./style.css -o ./src/output.css --watch\" \"php -S 127.0.0.1:3000\"",
+    "start": "php -S 127.0.0.1:3000"
   }
 }

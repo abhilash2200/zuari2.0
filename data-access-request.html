@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=UTF-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>Data Access Request - Zuari Infra</title>
+<link rel=stylesheet href=src/output.css>
+</head>
+<body class="bg-[#0a0a0a] text-gray-300 antialiased flex flex-col min-h-screen selection:bg-[#ebd373] selection:text-black">
+<nav class="fixed top-0 w-full z-50 bg-[#0a0a0a]/80 backdrop-blur-md border-b border-gray-800/50">
+<div class="container mx-auto px-6 py-4 flex justify-between items-center">
+<div class="flex items-center">
+<a href=index.html>
+<img src=assets/zuari-logo.webp class="h-[50px] md:h-[64px]" alt="Zuari Kinetix Logo">
+</a>
+</div>
+<a href=index.html class="text-xs uppercase tracking-widest text-gray-400 hover:text-white transition-colors border border-gray-700 px-4 py-2 rounded-full hover:border-[#ebd373]">
+Back to Home
+</a>
+</div>
+</nav>
+<main class="flex-grow max-w-4xl w-full mx-auto px-4 pt-24 pb-16">
+<div class="text-center mb-10">
+<h2 class="text-3xl font-serif sm:text-5xl tracking-tight bg-clip-text text-transparent bg-[linear-gradient(135deg,#F9F295_0%,#E0AA3E_50%,#F9F295_100%)]">
+Data Subject Access Request Form
+</h2>
+<div class="h-0.5 w-16 bg-yellow-600/50 mx-auto mt-4"></div>
+</div>
+<div class="bg-[#111111] rounded-xl shadow-2xl border border-gray-800/80 overflow-hidden">
+<form action=sendmail.php method=POST class="p-5 sm:p-8 space-y-6">
+<div>
+<h3 class="text-lg font-serif text-[#ebd373] border-b border-gray-800 pb-2 mb-4 tracking-wide">1. Contact Information</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class=sm:col-span-2>
+<input id=name name=name required class="w-full px-4 py-2.5 bg-transparent border border-gray-700 rounded-lg focus:outline-none focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500 transition-colors text-white placeholder-gray-500" placeholder="Your Name *">
+</div>
+<div>
+<input type=email id=email name=email required class="w-full px-4 py-2.5 bg-transparent border border-gray-700 rounded-lg focus:outline-none focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500 transition-colors text-white placeholder-gray-500" placeholder="Your Email *">
+</div>
+<div>
+<input type=tel id=mobile name=mobile required class="w-full px-4 py-2.5 bg-transparent border border-gray-700 rounded-lg focus:outline-none focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500 transition-colors text-white placeholder-gray-500" placeholder="Your Mobile No. *">
+</div>
+<div class=sm:col-span-2>
+<input id=subject name=subject required class="w-full px-4 py-2.5 bg-transparent border border-gray-700 rounded-lg focus:outline-none focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500 transition-colors text-white placeholder-gray-500" placeholder="Subject *">
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-serif text-[#ebd373] border-b border-gray-800 pb-2 mb-4 tracking-wide">2. I am requesting as:</h3>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+<label class="flex items-center p-3 border border-gray-800 bg-[#0a0a0a] rounded-lg cursor-pointer hover:border-gray-600 transition group">
+<input type=radio name=requestor_type value=individual checked class="h-4 w-4 accent-yellow-500 bg-transparent border-gray-700">
+<span class="ml-3 text-sm font-medium text-gray-300 group-hover:text-white transition-colors">Individual</span>
+</label>
+<label class="flex items-center p-3 border border-gray-800 bg-[#0a0a0a] rounded-lg cursor-pointer hover:border-gray-600 transition group">
+<input type=radio name=requestor_type value=guardian class="h-4 w-4 accent-yellow-500 bg-transparent border-gray-700">
+<span class="ml-3 text-sm font-medium text-gray-300 group-hover:text-white transition-colors">Guardian</span>
+</label>
+<label class="flex items-center p-3 border border-gray-800 bg-[#0a0a0a] rounded-lg cursor-pointer hover:border-gray-600 transition group">
+<input type=radio name=requestor_type value=agent class="h-4 w-4 accent-yellow-500 bg-transparent border-gray-700">
+<span class="ml-3 text-sm font-medium text-gray-300 group-hover:text-white transition-colors">Authorized Agent <span class="text-xs text-gray-500 block font-normal mt-0.5">(on behalf of consumer)</span></span>
+</label>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-serif text-[#ebd373] border-b border-gray-800 pb-2 mb-4 tracking-wide">3. I am submitting a request to:</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+<label class="flex items-start p-3 border border-gray-800 bg-[#0a0a0a] rounded-lg cursor-pointer hover:border-gray-600 transition group">
+<input type=checkbox name=request_actions[] value="View collected information" class="mt-0.5 h-4 w-4 accent-yellow-500 bg-transparent border-gray-700 rounded-sm">
+<span class="ml-3 text-sm text-gray-400 group-hover:text-gray-200 transition-colors">View collected information</span>
+</label>
+<label class="flex items-start p-3 border border-gray-800 bg-[#0a0a0a] rounded-lg cursor-pointer hover:border-gray-600 transition group">
+<input type=checkbox name=request_actions[] value="Request data deletion" class="mt-0.5 h-4 w-4 accent-yellow-500 bg-transparent border-gray-700 rounded-sm">
+<span class="ml-3 text-sm text-gray-400 group-hover:text-gray-200 transition-colors">Request data deletion</span>
+</label>
+<label class="flex items-start p-3 border border-gray-800 bg-[#0a0a0a] rounded-lg cursor-pointer hover:border-gray-600 transition group">
+<input type=checkbox name=request_actions[] value="No data sharing to third parties" class="mt-0.5 h-4 w-4 accent-yellow-500 bg-transparent border-gray-700 rounded-sm">
+<span class="ml-3 text-sm text-gray-400 group-hover:text-gray-200 transition-colors">No data sharing to third parties</span>
+</label>
+<label class="flex items-start p-3 border border-gray-800 bg-[#0a0a0a] rounded-lg cursor-pointer hover:border-gray-600 transition group">
+<input type=checkbox name=request_actions[] value="No cross-context behavioral ad" class="mt-0.5 h-4 w-4 accent-yellow-500 bg-transparent border-gray-700 rounded-sm">
+<span class="ml-3 text-sm text-gray-400 group-hover:text-gray-200 transition-colors">No cross-context behavioral ad</span>
+</label>
+<label class="flex items-start p-3 border border-gray-800 bg-[#0a0a0a] rounded-lg cursor-pointer hover:border-gray-600 transition group">
+<input type=checkbox name=request_actions[] value="Access my personal information" class="mt-0.5 h-4 w-4 accent-yellow-500 bg-transparent border-gray-700 rounded-sm">
+<span class="ml-3 text-sm text-gray-400 group-hover:text-gray-200 transition-colors">Access my personal information</span>
+</label>
+<label class="flex items-start p-3 border border-gray-800 bg-[#0a0a0a] rounded-lg cursor-pointer hover:border-gray-600 transition group">
+<input type=checkbox name=request_actions[] value="Correct inaccurate information" class="mt-0.5 h-4 w-4 accent-yellow-500 bg-transparent border-gray-700 rounded-sm">
+<span class="ml-3 text-sm text-gray-400 group-hover:text-gray-200 transition-colors">Correct inaccurate information</span>
+</label>
+<label class="flex items-start p-3 border border-gray-800 bg-[#0a0a0a] rounded-lg cursor-pointer hover:border-gray-600 transition group">
+<input type=checkbox name=request_actions[] value="Receive a copy of my personal data" class="mt-0.5 h-4 w-4 accent-yellow-500 bg-transparent border-gray-700 rounded-sm">
+<span class="ml-3 text-sm text-gray-400 group-hover:text-gray-200 transition-colors">Receive a copy of my personal data</span>
+</label>
+<label class="flex items-start p-3 border border-gray-800 bg-[#0a0a0a] rounded-lg cursor-pointer hover:border-gray-600 transition group">
+<input type=checkbox name=request_actions[] value="Restrict sensitive information use" class="mt-0.5 h-4 w-4 accent-yellow-500 bg-transparent border-gray-700 rounded-sm">
+<span class="ml-3 text-sm text-gray-400 group-hover:text-gray-200 transition-colors">Restrict sensitive information use</span>
+</label>
+<label class="flex items-start p-3 border border-gray-800 bg-[#0a0a0a] rounded-lg cursor-pointer hover:border-gray-600 transition group md:col-span-2">
+<input type=checkbox name=request_actions[] value=Other class="mt-0.5 h-4 w-4 accent-yellow-500 bg-transparent border-gray-700 rounded-sm">
+<span class="ml-3 text-sm text-gray-400 group-hover:text-gray-200 transition-colors">Other</span>
+</label>
+</div>
+</div>
+<div>
+<textarea id=message name=message rows=2 class="w-full px-4 py-2.5 bg-transparent border border-gray-700 rounded-lg focus:outline-none focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500 transition-colors text-white placeholder-gray-500" placeholder="Your Message (Optional)"></textarea>
+</div>
+<div class="bg-yellow-900/10 p-4 rounded-lg border border-yellow-700/30">
+<label class="flex items-start cursor-pointer group">
+<input type=checkbox name=confirmation required class="mt-1 h-4 w-4 accent-yellow-500 bg-transparent border-gray-700 rounded-sm">
+<span class="ml-3 text-sm text-gray-300 leading-relaxed group-hover:text-white transition-colors">
+I confirm the details are correct and I can be contacted to complete the request.
+</span>
+</label>
+</div>
+<div class=pt-2>
+<button type=submit class="w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-400 hover:to-yellow-500 text-black font-bold uppercase tracking-widest text-sm rounded-md shadow-lg shadow-yellow-600/20 transition-all active:scale-95 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2 focus:ring-offset-[#111111]">
+Submit Request
+</button>
+</div>
+</form>
+</div>
+</main>
+<footer class="py-8 border-t border-gray-800/50 bg-[#050505] mt-auto">
+<div class="container mx-auto px-6 text-center">
+<p class="text-gray-600 text-xs tracking-widest uppercase">© 2026 Zuari KinetiX. All Rights Reserved.</p>
+</div>
+</footer>
+</body>
+</html>
